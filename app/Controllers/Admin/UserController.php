@@ -132,11 +132,40 @@ class UserController extends BaseController
             
             $data = $this->getInput();
             
+            // DEBUG: Log data being submitted
+            $debug_log = "=== DEBUG USER UPDATE " . date('Y-m-d H:i:s') . " ===\n";
+            $debug_log .= "User ID: $id\n";
+            $debug_log .= "Raw POST: " . print_r($_POST, true) . "\n";
+            $debug_log .= "Data received: " . print_r($data, true) . "\n";
+            $debug_log .= "Permission value: " . ($data['permission'] ?? 'NOT SET') . "\n";
+            $debug_log .= "Permission debug: " . ($data['permission_debug'] ?? 'NOT SET') . "\n";
+            $debug_log .= "========================\n\n";
+            
+            file_put_contents(__DIR__ . '/../../../debug.log', $debug_log, FILE_APPEND);
+            
             // Validate dữ liệu (exclude current user for email/username check)
             $errors = $this->validateUserData($data, $id);
+            
+            // DEBUG: Log validation results
+            $validation_log = "=== DEBUG VALIDATION " . date('Y-m-d H:i:s') . " ===\n";
+            $validation_log .= "Validation errors: " . print_r($errors, true) . "\n";
+            $validation_log .= "Has errors: " . (empty($errors) ? 'NO' : 'YES') . "\n";
+            $validation_log .= "========================\n\n";
+            
+            file_put_contents(__DIR__ . '/../../../debug.log', $validation_log, FILE_APPEND);
+            
             if (!empty($errors)) {
+                error_log("DEBUG - Validation errors: " . print_r($errors, true));
                 return $this->redirect("admin/users/{$id}/edit", implode(', ', $errors), 'error');
             }
+            
+            // DEBUG: Before calling updateUser
+            $before_update_log = "=== DEBUG BEFORE UPDATE " . date('Y-m-d H:i:s') . " ===\n";
+            $before_update_log .= "About to call updateUser with ID: $id\n";
+            $before_update_log .= "Data: " . print_r($data, true) . "\n";
+            $before_update_log .= "========================\n\n";
+            
+            file_put_contents(__DIR__ . '/../../../debug.log', $before_update_log, FILE_APPEND);
             
             // Cập nhật user
             $success = $this->userModel->updateUser($id, $data);
@@ -230,7 +259,7 @@ class UserController extends BaseController
         }
         
         // Permission validation
-        if (isset($data['permission']) && !in_array($data['permission'], ['user', 'admin'])) {
+        if (isset($data['permission']) && !in_array($data['permission'], ['user', 'admin', 'journalist'])) {
             $errors[] = 'Invalid permission value';
         }
         
@@ -302,5 +331,69 @@ class UserController extends BaseController
         } catch (Exception $e) {
             return $this->redirect('admin/users', 'Error: ' . $e->getMessage(), 'error');
         }
+    }
+    
+    /**
+     * Cấp quyền nhà báo cho user
+     */
+    public function grantJournalist($id)
+    {
+        try {
+            $user = $this->userModel->getById($id);
+            if (!$user) {
+                return $this->redirect('admin/users', 'User not found', 'error');
+            }
+            
+            // Update permission to journalist (permission = 2)
+            $success = $this->userModel->update($id, ['permission' => 2]);
+            
+            if ($success) {
+                return $this->redirect('admin/users', "Đã cấp quyền nhà báo cho {$user['username']}!", 'success');
+            } else {
+                return $this->redirect('admin/users', 'Lỗi khi cấp quyền nhà báo', 'error');
+            }
+            
+        } catch (Exception $e) {
+            return $this->redirect('admin/users', 'Error: ' . $e->getMessage(), 'error');
+        }
+    }
+    
+    /**
+     * Thu hồi quyền nhà báo
+     */
+    public function revokeJournalist($id)
+    {
+        try {
+            $user = $this->userModel->getById($id);
+            if (!$user) {
+                return $this->redirect('admin/users', 'User not found', 'error');
+            }
+            
+            // Update permission back to user (permission = 0)
+            $success = $this->userModel->update($id, ['permission' => 0]);
+            
+            if ($success) {
+                return $this->redirect('admin/users', "Đã thu hồi quyền nhà báo của {$user['username']}!", 'success');
+            } else {
+                return $this->redirect('admin/users', 'Lỗi khi thu hồi quyền nhà báo', 'error');
+            }
+            
+        } catch (Exception $e) {
+            return $this->redirect('admin/users', 'Error: ' . $e->getMessage(), 'error');
+        }
+    }
+    
+    /**
+     * Test method for debugging routes
+     */
+    public function test($id = null)
+    {
+        echo "<h2>Test Route Working!</h2>";
+        echo "Controller: Admin\\UserController<br>";
+        echo "Method: test<br>";
+        echo "ID Parameter: " . ($id ?? 'null') . "<br>";
+        echo "Request URI: " . $_SERVER['REQUEST_URI'] . "<br>";
+        echo "Request Method: " . $_SERVER['REQUEST_METHOD'] . "<br>";
+        exit;
     }
 }

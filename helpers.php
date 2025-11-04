@@ -10,7 +10,47 @@
  */
 function url($path = '')
 {
-    return CURRENT_DOMAIN . ltrim($path, '/');
+    // Get base path dynamically
+    $basePath = get_base_path();
+    return $basePath . ltrim($path, '/');
+}
+
+/**
+ * Get base path dynamically
+ */
+function get_base_path()
+{
+    // Handle CLI environment (for development server)
+    if (php_sapi_name() === 'cli') {
+        // In CLI mode, check if we set SERVER vars manually for testing
+        if (isset($_SERVER['SCRIPT_NAME']) && $_SERVER['SCRIPT_NAME'] !== '') {
+            $scriptDir = dirname($_SERVER['SCRIPT_NAME']);
+            if ($scriptDir !== '/' && $scriptDir !== '\\') {
+                return current_domain() . $scriptDir . '/';
+            }
+        }
+        return current_domain() . '/';
+    }
+    
+    // Handle development server (port 8080)
+    if (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 8080) {
+        return current_domain() . '/';
+    }
+    
+    // For regular web server, determine base path from script name
+    $scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
+    
+    // Extract directory from script name
+    $scriptDir = dirname($scriptName);
+    
+    // Handle root directory
+    if ($scriptDir === '/' || $scriptDir === '\\' || $scriptDir === '.') {
+        $basePath = current_domain() . '/';
+    } else {
+        $basePath = current_domain() . $scriptDir . '/';
+    }
+    
+    return $basePath;
 }
 
 /**
@@ -18,7 +58,18 @@ function url($path = '')
  */
 function asset($path)
 {
-    return CURRENT_DOMAIN . 'public/' . ltrim($path, '/');
+    // Remove leading slash
+    $path = ltrim($path, '/');
+    
+    // Get base path dynamically
+    $basePath = get_base_path();
+    
+    // If path already starts with 'public/', don't add it again
+    if (strpos($path, 'public/') === 0) {
+        return $basePath . $path;
+    }
+    
+    return $basePath . 'public/' . $path;
 }
 
 /**
@@ -26,8 +77,16 @@ function asset($path)
  */
 function current_domain()
 {
-    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-    return $protocol . $_SERVER['HTTP_HOST'];
+    // Handle CLI environment
+    if (php_sapi_name() === 'cli') {
+        return 'http://localhost';
+    }
+    
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || 
+                (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) ? "https://" : "http://";
+    
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    return $protocol . $host;
 }
 
 /**
@@ -141,11 +200,27 @@ function is_admin()
 }
 
 /**
+ * Check if user is journalist
+ */
+function is_journalist()
+{
+    return is_auth() && isset($_SESSION['user']['permission']) && $_SESSION['user']['permission'] == 'journalist';
+}
+
+/**
+ * Check if user can write posts (admin or journalist)
+ */
+function can_write_posts()
+{
+    return is_admin() || is_journalist();
+}
+
+/**
  * Get authenticated user ID
  */
 function auth_id()
 {
-    return $_SESSION['user'] ?? null;
+    return $_SESSION['user']['id'] ?? null;
 }
 
 /**

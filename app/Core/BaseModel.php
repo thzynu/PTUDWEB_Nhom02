@@ -102,6 +102,18 @@ abstract class BaseModel
         $fields = array_keys($fillableData);
         $values = array_values($fillableData);
         
+        // Debug log for update operation
+        $debug_log = "=== DEBUG BASEMODEL UPDATE " . date('Y-m-d H:i:s') . " ===\n";
+        $debug_log .= "Table: {$this->table}\n";
+        $debug_log .= "ID: $id\n";
+        $debug_log .= "Original data: " . print_r($data, true) . "\n";
+        $debug_log .= "Fillable data: " . print_r($fillableData, true) . "\n";
+        $debug_log .= "Fields: " . print_r($fields, true) . "\n";
+        $debug_log .= "Values: " . print_r($values, true) . "\n";
+        $debug_log .= "========================\n\n";
+        
+        file_put_contents(__DIR__ . '/../../debug.log', $debug_log, FILE_APPEND);
+        
         return $this->db->update($this->table, $id, $fields, $values);
     }
     
