@@ -26,7 +26,12 @@ class AuthController extends BaseController
     {
         // Redirect if already logged in
         if (isset($_SESSION['user'])) {
-            return $this->redirect('/');
+            // Check if user is admin
+            if (isset($_SESSION['admin']) && $_SESSION['admin']) {
+                return $this->redirect('admin', 'Bạn đã đăng nhập với tư cách quản trị viên!');
+            } else {
+                return $this->redirect('', 'Bạn đã đăng nhập rồi!');
+            }
         }
         
         return $this->render('auth.login');
@@ -42,13 +47,13 @@ class AuthController extends BaseController
         // Validate input
         $errors = $this->validate($input, [
             'email' => 'required|email',
-            'password' => 'required|min:6'
+            'password' => 'required|min:3'  // Relaxed for existing admin accounts
         ]);
         
         if (!empty($errors)) {
             $_SESSION['errors'] = $errors;
             $_SESSION['old_input'] = $input;
-            return $this->redirectBack('Please check your input.', 'error');
+            return $this->redirectBack('Vui lòng kiểm tra thông tin nhập vào.', 'error');
         }
         
         // Verify credentials
@@ -60,21 +65,39 @@ class AuthController extends BaseController
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
             
-            // Set admin flag if user has admin permission
-            if ($user['permission'] == 1) {
+            // Set role flags
+            $_SESSION['user'] = [
+                'id' => $user['id'],
+                'username' => $user['username'],
+                'email' => $user['email'],
+                'permission' => $user['permission']
+            ];
+            
+            if ($user['permission'] == 'admin' || $user['permission'] == 1) {
                 $_SESSION['admin'] = true;
+            } elseif ($user['permission'] == 'journalist') {
+                $_SESSION['journalist'] = true;
             }
             
             // Update last login
             $this->userModel->updateLastLogin($user['id']);
             
-            // Redirect to intended page or home
-            $redirectUrl = $_SESSION['intended_url'] ?? '/';
+            // Redirect based on user role
+            if ($user['permission'] == 'admin' || $user['permission'] == 1) {
+                // Admin user - redirect to admin panel
+                $redirectUrl = 'admin';
+            } elseif ($user['permission'] == 'journalist') {
+                // Journalist user - redirect to journalist panel
+                $redirectUrl = 'journalist';
+            } else {
+                // Regular user - redirect to intended page or home
+                $redirectUrl = $_SESSION['intended_url'] ?? '';
+            }
             unset($_SESSION['intended_url']);
             
-            return $this->redirect($redirectUrl, 'Welcome back, ' . $user['username'] . '!');
+            return $this->redirect($redirectUrl, 'Chào mừng bạn trở lại, ' . $user['username'] . '!');
         } else {
-            return $this->redirectBack('Invalid email or password.', 'error');
+            return $this->redirectBack('Email hoặc mật khẩu không đúng.', 'error');
         }
     }
     
@@ -85,7 +108,12 @@ class AuthController extends BaseController
     {
         // Redirect if already logged in
         if (isset($_SESSION['user'])) {
-            return $this->redirect('/');
+            // Check if user is admin
+            if (isset($_SESSION['admin']) && $_SESSION['admin']) {
+                return $this->redirect('admin', 'Bạn đã đăng nhập với tư cách quản trị viên!');
+            } else {
+                return $this->redirect('', 'Bạn đã đăng nhập rồi!');
+            }
         }
         
         return $this->render('auth.register');
@@ -109,17 +137,17 @@ class AuthController extends BaseController
         
         // Check if email exists
         if ($this->userModel->emailExists($input['email'])) {
-            $errors['email'][] = 'This email is already registered.';
+            $errors['email'][] = 'Email này đã được đăng ký.';
         }
         
         // Check if username exists
         if ($this->userModel->usernameExists($input['username'])) {
-            $errors['username'][] = 'This username is already taken.';
+            $errors['username'][] = 'Tên người dùng này đã được sử dụng.';
         }
         
         // Check password confirmation
         if ($input['password'] !== $input['password_confirmation']) {
-            $errors['password_confirmation'][] = 'Password confirmation does not match.';
+            $errors['password_confirmation'][] = 'Xác nhận mật khẩu không khớp.';
         }
         
         if (!empty($errors)) {
@@ -141,9 +169,9 @@ class AuthController extends BaseController
         $result = $this->userModel->createUser($userData);
         
         if ($result) {
-            return $this->redirect('login', 'Registration successful! Please log in.', 'success');
+            return $this->redirect('login', 'Đăng ký thành công! Vui lòng đăng nhập.', 'success');
         } else {
-            return $this->redirectBack('Registration failed. Please try again.', 'error');
+            return $this->redirectBack('Đăng ký thất bại. Vui lòng thử lại.', 'error');
         }
     }
     
@@ -156,7 +184,7 @@ class AuthController extends BaseController
         session_unset();
         session_destroy();
         
-        return $this->redirect('/', 'You have been logged out successfully.');
+        return $this->redirect('/', 'Bạn đã đăng xuất thành công.');
     }
     
     /**
