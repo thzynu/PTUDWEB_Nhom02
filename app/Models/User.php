@@ -155,6 +155,7 @@ class User extends BaseModel
                     COUNT(*) as total_users,
                     SUM(CASE WHEN permission = 1 THEN 1 ELSE 0 END) as admin_count,
                     SUM(CASE WHEN permission = 0 THEN 1 ELSE 0 END) as user_count,
+                    SUM(CASE WHEN permission = 2 THEN 1 ELSE 0 END) as journalist_count,
                     SUM(CASE WHEN DATE(created_at) = CURDATE() THEN 1 ELSE 0 END) as today_registrations
                 FROM users";
         
@@ -241,6 +242,14 @@ class User extends BaseModel
         } else {
             unset($data['password']); // Don't update password if empty
         }
+        
+        // Debug log the data being passed to update
+        $debug_log = "=== DEBUG USER MODEL UPDATE " . date('Y-m-d H:i:s') . " ===\n";
+        $debug_log .= "User ID: $id\n";
+        $debug_log .= "Data for update: " . print_r($data, true) . "\n";
+        $debug_log .= "========================\n\n";
+        
+        file_put_contents(__DIR__ . '/../../debug.log', $debug_log, FILE_APPEND);
         
         return $this->update($id, $data);
     }

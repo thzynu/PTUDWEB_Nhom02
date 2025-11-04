@@ -35,6 +35,17 @@ abstract class BaseController
     {
         $data = array_merge($_GET, $_POST);
         
+        // Debug logging for form data
+        if (!$key) {
+            $debug_log = "=== DEBUG GETINPUT " . date('Y-m-d H:i:s') . " ===\n";
+            $debug_log .= "POST data: " . print_r($_POST, true) . "\n";
+            $debug_log .= "GET data: " . print_r($_GET, true) . "\n";
+            $debug_log .= "Merged data: " . print_r($data, true) . "\n";
+            $debug_log .= "========================\n\n";
+            
+            file_put_contents(__DIR__ . '/../../debug.log', $debug_log, FILE_APPEND);
+        }
+        
         if ($key) {
             return $data[$key] ?? $default;
         }

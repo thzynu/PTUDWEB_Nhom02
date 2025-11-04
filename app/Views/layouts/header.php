@@ -195,10 +195,12 @@
         .navbar-nav .nav-link {
             font-weight: 500;
             color: var(--text-primary);
-            padding: 8px 20px;
+            padding: 6px 12px;
             border-radius: 6px;
             transition: all 0.3s ease;
-            font-size: 15px;
+            font-size: 14px;
+            margin: 0 1px;
+            white-space: nowrap;
         }
         
         .navbar-nav .nav-link:hover {
@@ -209,6 +211,81 @@
         .navbar-nav .nav-link.active {
             color: var(--bs-primary);
             background: var(--bs-light);
+        }
+        
+        /* Dropdown styling */
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            padding: 8px 0;
+            margin-top: 8px;
+            min-width: 180px;
+            z-index: 1050;
+            position: absolute !important;
+            display: none;
+        }
+        
+        .dropdown-menu.show {
+            display: block !important;
+        }
+        
+        .dropdown-item {
+            padding: 8px 16px;
+            font-size: 14px;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .dropdown-item:hover {
+            background: var(--bs-light);
+            color: var(--bs-primary);
+        }
+        
+        .dropdown-item i {
+            font-size: 13px;
+            opacity: 0.8;
+            width: 16px;
+        }
+        
+        .dropdown-toggle::after {
+            font-family: "Font Awesome 5 Free";
+            content: "\f107";
+            border: none;
+            font-weight: 900;
+            vertical-align: 0;
+            margin-left: 4px;
+        }
+        
+        /* Search form compact */
+        .search-container {
+            flex-shrink: 0;
+        }
+        
+        .search-form {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-form input {
+            padding-left: 35px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            font-size: 13px;
+        }
+        
+        .search-btn {
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            z-index: 10;
         }
         
         /* Bootstrap overrides */
@@ -561,11 +638,6 @@
                     <div class="d-flex justify-content-end align-items-center">
                         <?php if(isset($_SESSION['user']) && $_SESSION['user']): ?>
                             <!-- User is logged in -->
-                            <?php if(isset($_SESSION['admin']) && $_SESSION['admin']): ?>
-                                <a href="<?= url('admin') ?>" class="btn btn-success btn-sm me-2">
-                                    <i class="fas fa-tachometer-alt me-1"></i>Bảng Quản trị
-                                </a>
-                            <?php endif; ?>
                             <span class="text-muted me-3">
                                 <i class="fas fa-user me-1"></i>
                                 <?= $_SESSION['username'] ?? 'User' ?>
@@ -575,12 +647,7 @@
                             </a>
                         <?php else: ?>
                             <!-- User is not logged in -->
-                            <a href="<?= url('login') ?>" class="btn btn-outline-primary btn-sm me-2">
-                                <i class="fas fa-sign-in-alt me-1"></i>Đăng nhập
-                            </a>
-                            <a href="<?= url('register') ?>" class="btn btn-primary btn-sm">
-                                <i class="fas fa-user-plus me-1"></i>Đăng ký
-                            </a>
+                            <span class="text-muted">Chào mừng bạn đến với trang tin tức</span>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -609,28 +676,60 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= url('/') ?>">
-                            Home
+                        <a class="nav-link px-2" href="<?= url('/') ?>">
+                            <i class="fas fa-home me-1"></i>Home
                         </a>
                     </li>
                     <?php if(!empty($categories)) { ?>
-                        <?php foreach ($categories as $category) { ?>
+                        <?php 
+                        $visibleCategories = array_slice($categories, 0, 3); // Chỉ hiển thị 3 danh mục
+                        $hiddenCategories = array_slice($categories, 3); // Các danh mục còn lại
+                        $icons = [
+                            'Chính trị' => 'fas fa-landmark',
+                            'Công nghệ' => 'fas fa-microchip', 
+                            'Khoa học' => 'fas fa-flask',
+                            'Kinh doanh' => 'fas fa-chart-line',
+                            'Thể thao' => 'fas fa-futbol',
+                            'Giải trí' => 'fas fa-film',
+                            'Sức khỏe' => 'fas fa-heart',
+                            'Du lịch' => 'fas fa-plane'
+                        ];
+                        ?>
+                        
+                        <?php foreach ($visibleCategories as $category) { ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= url('show-category/' . $category['id']) ?>">
+                            <a class="nav-link px-2" href="<?= url('show-category/' . $category['id']) ?>">
                                 <?= $category['name'] ?>
                             </a>
+                        </li>
+                        <?php } ?>
+                        
+                        <?php if(!empty($hiddenCategories)) { ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link px-2 dropdown-toggle" href="#" id="moreCategories" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Thêm
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="moreCategories">
+                                <?php foreach ($hiddenCategories as $category) { ?>
+                                <li>
+                                    <a class="dropdown-item" href="<?= url('show-category/' . $category['id']) ?>">
+                                        <?= $category['name'] ?>
+                                    </a>
+                                </li>
+                                <?php } ?>
+                            </ul>
                         </li>
                         <?php } ?>
                     <?php } ?>
                 </ul>
 
-                <!-- Search Form -->
-                <div class="search-container me-3" style="position: relative;">
+                <!-- Search Form - Compact -->
+                <div class="search-container me-2" style="position: relative; max-width: 250px;">
                     <form class="search-form" method="GET" action="<?= url('/') ?>" id="searchForm">
                         <button type="submit" class="search-btn">
                             <i class="fas fa-search"></i>
                         </button>
-                        <input type="text" name="search" id="searchInput" class="form-control" placeholder="Tìm kiếm bài viết..." autocomplete="off" value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>">
+                        <input type="text" name="search" id="searchInput" class="form-control form-control-sm" placeholder="Tìm kiếm..." autocomplete="off" value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>">
                     </form>
                     <!-- Search Results Dropdown -->
                     <div id="searchResults" class="search-results" style="display: none;"></div>
@@ -650,10 +749,10 @@
                             </li>
                         <?php endif; ?>
                         
-                        <!-- Journalist Panel Button -->
-                        <?php if (isset($_SESSION['user']['permission']) && ($_SESSION['user']['permission'] == 'journalist' || $_SESSION['user']['permission'] == 'admin')): ?>
+                        <!-- Journalist Panel Button - CHỈ cho tài khoản journalist -->
+                        <?php if (isset($_SESSION['user']['permission']) && $_SESSION['user']['permission'] == 'journalist'): ?>
                             <li class="nav-item me-2">
-                                <a class="btn btn-success btn-sm position-relative" href="<?= url('journalist') ?>"
+                                <a class="btn btn-success btn-sm position-relative" href="<?= url('journalist.php') ?>"
                                    data-bs-toggle="tooltip" data-bs-placement="bottom" 
                                    title="Quản lý bài viết và bình luận của bạn">
                                     <i class="fas fa-newspaper me-1"></i>Panel Nhà báo
@@ -704,8 +803,8 @@
                                     </a></li>
                                 <?php endif; ?>
                                 
-                                <?php if (isset($_SESSION['user']['permission']) && ($_SESSION['user']['permission'] == 'journalist' || $_SESSION['user']['permission'] == 'admin')): ?>
-                                    <li><a class="dropdown-item" href="<?= url('journalist') ?>">
+                                <?php if (isset($_SESSION['user']['permission']) && $_SESSION['user']['permission'] == 'journalist'): ?>
+                                    <li><a class="dropdown-item" href="<?= url('journalist.php') ?>">
                                         <i class="fas fa-newspaper me-2"></i>Panel Nhà báo
                                     </a></li>
                                 <?php endif; ?>
@@ -784,5 +883,35 @@
                     this.style.transform = 'translateY(0)';
                 });
             });
+
+            // Dropdown fallback - nếu Bootstrap dropdown không hoạt động
+            const dropdownToggle = document.getElementById('moreCategories');
+            if (dropdownToggle) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const dropdownMenu = this.nextElementSibling;
+                    if (dropdownMenu) {
+                        // Toggle dropdown
+                        if (dropdownMenu.style.display === 'block') {
+                            dropdownMenu.style.display = 'none';
+                            this.setAttribute('aria-expanded', 'false');
+                        } else {
+                            dropdownMenu.style.display = 'block';
+                            this.setAttribute('aria-expanded', 'true');
+                        }
+                    }
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdownToggle.contains(e.target)) {
+                        const dropdownMenu = dropdownToggle.nextElementSibling;
+                        if (dropdownMenu) {
+                            dropdownMenu.style.display = 'none';
+                            dropdownToggle.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            }
         });
     </script>

@@ -22,11 +22,14 @@ class Post extends BaseModel
      */
     public function getWithRelations($limit = null)
     {
-        $sql = "SELECT p.*, u.username, c.name as category_name, c.id as category_id
+        $sql = "SELECT p.*, u.username, c.name as category_name, c.id as category_id,
+                       COUNT(cm.id) as comments_count
                 FROM posts p 
                 LEFT JOIN users u ON p.user_id = u.id 
                 LEFT JOIN categories c ON p.cat_id = c.id 
+                LEFT JOIN comments cm ON p.id = cm.post_id AND cm.status = 'approved'
                 WHERE p.status = 1 
+                GROUP BY p.id
                 ORDER BY p.created_at DESC";
         
         if ($limit) {
@@ -57,10 +60,12 @@ class Post extends BaseModel
      */
     public function getByCategory($categoryId, $excludeId = null, $limit = 3)
     {
-        $sql = "SELECT p.*, u.username, c.name as category_name
+        $sql = "SELECT p.*, u.username, c.name as category_name,
+                       COUNT(cm.id) as comments_count
                 FROM posts p 
                 LEFT JOIN users u ON p.user_id = u.id 
                 LEFT JOIN categories c ON p.cat_id = c.id 
+                LEFT JOIN comments cm ON p.id = cm.post_id AND cm.status = 'approved'
                 WHERE p.cat_id = ? AND p.status = 1";
         
         $params = [$categoryId];
@@ -70,7 +75,7 @@ class Post extends BaseModel
             $params[] = $excludeId;
         }
         
-        $sql .= " ORDER BY p.view DESC, p.created_at DESC LIMIT " . (int)$limit;
+        $sql .= " GROUP BY p.id ORDER BY p.view DESC, p.created_at DESC LIMIT " . (int)$limit;
         
         $result = $this->db->select($sql, $params);
         return $result ? $result->fetchAll() : [];
@@ -101,12 +106,15 @@ class Post extends BaseModel
      */
     public function search($query, $limit = 10)
     {
-        $sql = "SELECT p.*, u.username, c.name as category_name
+        $sql = "SELECT p.*, u.username, c.name as category_name,
+                       COUNT(cm.id) as comments_count
                 FROM posts p 
                 LEFT JOIN users u ON p.user_id = u.id 
                 LEFT JOIN categories c ON p.cat_id = c.id 
+                LEFT JOIN comments cm ON p.id = cm.post_id AND cm.status = 'approved'
                 WHERE (p.title LIKE ? OR p.summary LIKE ? OR p.body LIKE ?) 
                 AND p.status = 1
+                GROUP BY p.id
                 ORDER BY p.created_at DESC 
                 LIMIT " . (int)$limit;
         

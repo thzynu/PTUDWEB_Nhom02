@@ -30,6 +30,18 @@ class HomeController extends BaseController
      */
     public function index()
     {
+        // DEBUG: Check if user is journalist and might redirect
+        if (isset($_SESSION['user']['permission'])) {
+            $debug_log = "=== HomeController index " . date('Y-m-d H:i:s') . " ===\n";
+            $debug_log .= "User permission: " . $_SESSION['user']['permission'] . "\n";
+            if ($_SESSION['user']['permission'] == 'journalist') {
+                $debug_log .= "Journalist detected, checking for redirect logic\n";
+            }
+            $debug_log .= "========================\n\n";
+            
+            file_put_contents(__DIR__ . '/../../debug_login.log', $debug_log, FILE_APPEND);
+        }
+        
         // Get website settings
         $settings = $this->getWebsiteSettings();
         
@@ -179,13 +191,13 @@ class HomeController extends BaseController
             if ($toxicInfo['should_approve']) {
                 // Clean comment - auto approved
                 $_SESSION['comment_message'] = [
-                    'text' => 'Your comment has been posted successfully!',
+                    'text' => 'Bình luận của bạn đã được đăng thành công!',
                     'type' => 'success'
                 ];
             } else {
                 // Toxic comment - pending review
-                $message = '⚠️ Your comment has been flagged as potentially inappropriate and is pending review. ';
-                $message .= 'Please ensure your comments are respectful and constructive.';
+                $message = '⚠️ Bình luận của bạn đã bị đánh dấu là có thể không phù hợp và đang chờ xét duyệt. ';
+                $message .= 'Vui lòng đảm bảo bình luận của bạn là tôn trọng và mang tính xây dựng.';
                 $_SESSION['comment_message'] = [
                     'text' => $message,
                     'type' => 'warning'
