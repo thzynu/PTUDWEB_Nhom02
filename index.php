@@ -7,6 +7,10 @@ session_start();
 
 // Configuration
 define('BASE_PATH', __DIR__);
+
+// Helper functions (load first because current_domain() is needed)
+require_once BASE_PATH . '/helpers.php';
+
 define('CURRENT_DOMAIN', current_domain() . '/OnlineNewsSite/');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'news-project');
@@ -30,9 +34,6 @@ if (DISPLAY_ERROR) {
 
 // Autoloader
 require_once BASE_PATH . '/app/Core/Autoloader.php';
-
-// Helper functions
-require_once BASE_PATH . '/helpers.php';
 
 try {
     // Load routes and dispatch
