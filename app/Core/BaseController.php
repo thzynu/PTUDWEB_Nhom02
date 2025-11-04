@@ -2,102 +2,82 @@
 
 namespace App\Core;
 
-/**
- * Base Controller Class
- * Cung cấp functionality cơ bản cho tất cả controllers
- */
+use Database\DataBase;
+
 abstract class BaseController
 {
-    protected $view;
+    protected $db;
+    protected $viewEngine;
     
     public function __construct()
     {
-        $this->view = new ViewEngine();
+        $this->db = new DataBase();
+        $this->viewEngine = new ViewEngine();
     }
     
-    /**
-     * Render view với data
-     */
-    protected function render($viewPath, $data = [])
+    protected function render($view, $data = [])
     {
-        return $this->view->render($viewPath, $data);
+        return $this->viewEngine->render($view, $data);
     }
     
-    /**
-     * Redirect với message
-     */
-    protected function redirect($url, $message = null, $type = 'success')
+    protected function redirect($url, $message = null, $type = 'info')
     {
         if ($message) {
-            $_SESSION['flash_message'] = [
-                'message' => $message,
-                'type' => $type
-            ];
+            $_SESSION['flash_message'] = $message;
+            $_SESSION['flash_type'] = $type;
         }
         
-        header("Location: " . url($url));
+        header('Location: ' . url($url));
         exit;
     }
     
-    /**
-     * Redirect back
-     */
-    protected function redirectBack($message = null, $type = 'success')
+    protected function getInput($key = null, $default = null)
     {
-        if ($message) {
-            $_SESSION['flash_message'] = [
-                'message' => $message,
-                'type' => $type
-            ];
+        $data = array_merge($_GET, $_POST);
+        
+        if ($key) {
+            return $data[$key] ?? $default;
         }
         
+        return $data;
+    }
+    
+    protected function redirectBack($message = null, $type = 'info')
+    {
         $referer = $_SERVER['HTTP_REFERER'] ?? '/';
-        header("Location: " . $referer);
+        
+        if ($message) {
+            $_SESSION['flash_message'] = $message;
+            $_SESSION['flash_type'] = $type;
+        }
+        
+        header('Location: ' . $referer);
         exit;
     }
     
-    /**
-     * Return JSON response
-     */
-    protected function json($data, $statusCode = 200)
-    {
-        http_response_code($statusCode);
-        header('Content-Type: application/json');
-        echo json_encode($data);
-        exit;
-    }
-    
-    /**
-     * Validate request data
-     */
-    protected function validate($data, $rules)
+    protected function validate($input, $rules)
     {
         $errors = [];
         
         foreach ($rules as $field => $rule) {
-            $ruleArray = explode('|', $rule);
+            $value = $input[$field] ?? '';
+            $ruleList = explode('|', $rule);
             
-            foreach ($ruleArray as $singleRule) {
-                if ($singleRule === 'required' && empty($data[$field])) {
-                    $errors[$field][] = "The {$field} field is required.";
-                }
-                
-                if (strpos($singleRule, 'min:') === 0) {
+            foreach ($ruleList as $singleRule) {
+                if ($singleRule === 'required' && empty($value)) {
+                    $errors[$field][] = ucfirst($field) . ' is required.';
+                } elseif (strpos($singleRule, 'min:') === 0) {
                     $min = (int) substr($singleRule, 4);
-                    if (strlen($data[$field]) < $min) {
-                        $errors[$field][] = "The {$field} must be at least {$min} characters.";
+                    if (strlen($value) < $min) {
+                        $errors[$field][] = ucfirst($field) . " must be at least {$min} characters.";
                     }
-                }
-                
-                if (strpos($singleRule, 'max:') === 0) {
+                } elseif (strpos($singleRule, 'max:') === 0) {
                     $max = (int) substr($singleRule, 4);
-                    if (strlen($data[$field]) > $max) {
-                        $errors[$field][] = "The {$field} may not be greater than {$max} characters.";
+                    if (strlen($value) > $max) {
+                        $errors[$field][] = ucfirst($field) . " must not exceed {$max} characters.";
                     }
-                }
-                
-                if ($singleRule === 'email' && !filter_var($data[$field], FILTER_VALIDATE_EMAIL)) {
-                    $errors[$field][] = "The {$field} must be a valid email address.";
+                } elseif ($singleRule === 'email' && !filter_var($value, FILTER_VALIDATE_EMAIL)) {
+                    $errors[$field][] = ucfirst($field) . ' must be a valid email address.';
                 }
             }
         }
@@ -105,51 +85,35 @@ abstract class BaseController
         return $errors;
     }
     
-    /**
-     * Check if user is authenticated
-     */
+    protected function sanitize($input)
+    {
+        if (is_array($input)) {
+            return array_map([$this, 'sanitize'], $input);
+        }
+        return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
+    }
+    
+    protected function json($data)
+    {
+        header('Content-Type: application/json');
+        echo json_encode($data);
+        exit;
+    }
+    
     protected function requireAuth()
     {
-        if (!isset($_SESSION['user']) || $_SESSION['user'] === null) {
-            $this->redirect('login', 'Please login to access this page.', 'error');
+        if (!isset($_SESSION['user'])) {
+            $this->redirect('login', 'Please login', 'warning');
         }
     }
     
-    /**
-     * Check if user is admin
-     */
     protected function requireAdmin()
     {
         $this->requireAuth();
         
-        if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
-            $this->redirect('/', 'Access denied. Admin privileges required.', 'error');
+        // Check admin flag that was set during login
+        if (empty($_SESSION['admin'])) {
+            $this->redirect('/', 'Access denied - Admin privileges required', 'error');
         }
-    }
-    
-    /**
-     * Get request data
-     */
-    protected function getInput($key = null, $default = null)
-    {
-        $input = array_merge($_GET, $_POST, $_FILES);
-        
-        if ($key === null) {
-            return $input;
-        }
-        
-        return $input[$key] ?? $default;
-    }
-    
-    /**
-     * Sanitize input data
-     */
-    protected function sanitize($data)
-    {
-        if (is_array($data)) {
-            return array_map([$this, 'sanitize'], $data);
-        }
-        
-        return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
     }
 }

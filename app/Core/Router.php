@@ -156,7 +156,7 @@ class Router
         $parameters = $route['parameters'];
         
         // Add namespace if not present
-        if (strpos($controllerClass, '\\') === false) {
+        if (strpos($controllerClass, 'App\\Controllers\\') !== 0) {
             $controllerClass = 'App\\Controllers\\' . $controllerClass;
         }
         
@@ -170,8 +170,11 @@ class Router
             throw new \Exception("Method {$action} not found in {$controllerClass}");
         }
         
-        // Call controller method with parameters
-        call_user_func_array([$controller, $action], $parameters);
+        // Call controller method with parameters and echo result
+        $result = call_user_func_array([$controller, $action], $parameters);
+        if ($result !== null) {
+            echo $result;
+        }
     }
     
     /**
@@ -199,10 +202,15 @@ class Router
             $uri = substr($uri, 0, $pos);
         }
         
-        // Remove base path (OnlineNewsSite)
-        $basePath = '/OnlineNewsSite';
-        if (strpos($uri, $basePath) === 0) {
-            $uri = substr($uri, strlen($basePath));
+        // Dynamically determine and remove base path
+        $scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
+        $scriptDir = dirname($scriptName);
+        
+        // Only remove base path if it's not the root directory
+        if ($scriptDir !== '/' && $scriptDir !== '\\' && !empty($scriptDir)) {
+            if (strpos($uri, $scriptDir) === 0) {
+                $uri = substr($uri, strlen($scriptDir));
+            }
         }
         
         return $this->normalizeUri($uri);
@@ -232,6 +240,6 @@ class Router
     public function url($routeName, $parameters = [])
     {
         // Implementation for named routes
-        return CURRENT_DOMAIN . ltrim($routeName, '/');
+        return url($routeName); // Use global url helper
     }
 }

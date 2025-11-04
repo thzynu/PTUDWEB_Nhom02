@@ -15,6 +15,8 @@ class ViewEngine
     public function __construct()
     {
         $this->viewsPath = BASE_PATH . '/app/Views/';
+        // Disable layout by default since views include header/footer themselves
+        $this->layout = null;
     }
     
     /**
@@ -122,7 +124,7 @@ class ViewEngine
      */
     public function asset($path)
     {
-        return CURRENT_DOMAIN . 'public/' . ltrim($path, '/');
+        return asset($path); // Use global asset helper
     }
     
     /**
@@ -130,7 +132,7 @@ class ViewEngine
      */
     public function url($path = '')
     {
-        return CURRENT_DOMAIN . ltrim($path, '/');
+        return url($path); // Use global url helper
     }
     
     /**
