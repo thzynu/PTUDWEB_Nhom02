@@ -1,0 +1,68 @@
+=== DB INSERT DEBUG 2025-11-05 02:56:27 ===
+Table: users
+SQL: INSERT INTO users(username, email, password, permission, is_active, created_at) VALUES ( :username, :email, :password, :permission, :is_active, now() )
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => haibabon
+    [1] => haibabon@gmail.com
+    [2] => $2y$10$PIM.jxqHnmV0TiD.12OA9OHEBRbnoh7Iu99wrnRXo0O563lVd98le
+    [3] => 0
+    [4] => 0
+)
+
+Combined: Array
+(
+    [username] => haibabon
+    [email] => haibabon@gmail.com
+    [password] => $2y$10$PIM.jxqHnmV0TiD.12OA9OHEBRbnoh7Iu99wrnRXo0O563lVd98le
+    [permission] => 0
+    [is_active] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 27
+========================
+
+=== DB INSERT DEBUG 2025-11-05 02:57:35 ===
+Table: users
+SQL: INSERT INTO users(username, email, password, permission, is_active, created_at) VALUES ( :username, :email, :password, :permission, :is_active, now() )
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => accmoi
+    [1] => accmoi@gmail.com
+    [2] => $2y$10$3.WLzF7HQWlJ23X.HKlnSOIz8Z4M8qg5l2NcrQ2ld66vZir4D5lBK
+    [3] => 0
+    [4] => 0
+)
+
+Combined: Array
+(
+    [username] => accmoi
+    [email] => accmoi@gmail.com
+    [password] => $2y$10$3.WLzF7HQWlJ23X.HKlnSOIz8Z4M8qg5l2NcrQ2ld66vZir4D5lBK
+    [permission] => 0
+    [is_active] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 28
+========================
+

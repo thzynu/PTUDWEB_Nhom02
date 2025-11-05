@@ -114,7 +114,11 @@
                         <?php } ?>
 
                         <!-- Reset Password Form -->
-                        <form action="<?= url('reset-password/' . $forgot_token) ?>" method="post" class="needs-validation" novalidate>
+                        <form action="<?= url('reset-password') ?>" method="post" class="needs-validation" novalidate>
+                            <!-- Hidden fields for token and email -->
+                            <input type="hidden" name="token" value="<?= htmlspecialchars($token ?? '') ?>">
+                            <input type="hidden" name="email" value="<?= htmlspecialchars($email ?? '') ?>">
+                            
                             <!-- Password Field -->
                             <div class="mb-4">
                                 <label for="password" class="form-label fw-semibold">
@@ -126,6 +130,7 @@
                                            id="password" 
                                            name="password" 
                                            placeholder="Enter new password"
+                                           minlength="6"
                                            required>
                                     <button type="button" 
                                             class="btn btn-outline-secondary position-absolute end-0 top-0 h-100 border-0"
@@ -134,7 +139,7 @@
                                     </button>
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please provide a new password.
+                                    Password must be at least 6 characters.
                                 </div>
                             </div>
 
