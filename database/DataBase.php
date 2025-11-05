@@ -56,9 +56,27 @@ class DataBase
     {
         try {
             $statement = $this->connection->prepare("INSERT INTO " . $tableName . "(" . implode(', ', $fields) . ", created_at) VALUES ( :" . implode(', :', $fields) . ", now() );");
-            $statement->execute(array_combine($fields, $values));
-            return true;
+            $result = $statement->execute(array_combine($fields, $values));
+            
+            // Debug log
+            $debug = "=== DB INSERT DEBUG " . date('Y-m-d H:i:s') . " ===\n";
+            $debug .= "Table: $tableName\n";
+            $debug .= "SQL: INSERT INTO " . $tableName . "(" . implode(', ', $fields) . ", created_at) VALUES ( :" . implode(', :', $fields) . ", now() )\n";
+            $debug .= "Fields: " . print_r($fields, true) . "\n";
+            $debug .= "Values: " . print_r($values, true) . "\n";
+            $debug .= "Combined: " . print_r(array_combine($fields, $values), true) . "\n";
+            $debug .= "Result: " . ($result ? 'SUCCESS' : 'FAILED') . "\n";
+            $debug .= "Last Insert ID: " . $this->connection->lastInsertId() . "\n";
+            $debug .= "========================\n\n";
+            file_put_contents(__DIR__ . '/../db_insert.log', $debug, FILE_APPEND);
+            
+            return $result ? $this->connection->lastInsertId() : false;
         } catch (Exception $e) {
+            $error = 'DB INSERT ERROR: ' . $e->getMessage() . "\n";
+            $error .= "Table: $tableName\n";
+            $error .= "Fields: " . print_r($fields, true) . "\n";
+            $error .= "Values: " . print_r($values, true) . "\n";
+            file_put_contents(__DIR__ . '/../db_error.log', $error, FILE_APPEND);
             echo 'error ' . $e->getMessage();
             return false;
         }

@@ -1,7 +1,8 @@
-=== DEBUG GETINPUT 2025-11-04 16:21:23 ===
+=== DEBUG GETINPUT 2025-11-05 02:56:27 ===
 POST data: Array
 (
-    [email] => onlinenewssite@admin.com
+    [username] => haibabon
+    [email] => haibabon@gmail.com
     [password] => 123456789
 )
 
@@ -11,36 +12,84 @@ GET data: Array
 
 Merged data: Array
 (
-    [email] => onlinenewssite@admin.com
+    [username] => haibabon
+    [email] => haibabon@gmail.com
     [password] => 123456789
 )
 
 ========================
 
-=== DEBUG GETINPUT 2025-11-04 16:21:42 ===
-POST data: Array
+=== DEBUG CREATE 2025-11-05 02:56:27 ===
+Table: users
+Original data: Array
 (
-    [post_id] => 41
-    [comment] => what the fuck
+    [username] => haibabon
+    [email] => haibabon@gmail.com
+    [password] => $2y$10$PIM.jxqHnmV0TiD.12OA9OHEBRbnoh7Iu99wrnRXo0O563lVd98le
+    [permission] => 0
+    [is_active] => 0
 )
 
-GET data: Array
+Fillable data: Array
 (
+    [username] => haibabon
+    [email] => haibabon@gmail.com
+    [password] => $2y$10$PIM.jxqHnmV0TiD.12OA9OHEBRbnoh7Iu99wrnRXo0O563lVd98le
+    [permission] => 0
+    [is_active] => 0
 )
 
-Merged data: Array
+Fields: Array
 (
-    [post_id] => 41
-    [comment] => what the fuck
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => haibabon
+    [1] => haibabon@gmail.com
+    [2] => $2y$10$PIM.jxqHnmV0TiD.12OA9OHEBRbnoh7Iu99wrnRXo0O563lVd98le
+    [3] => 0
+    [4] => 0
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-05 02:56:27 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [verify_token] => 166c9cc81494778b63839536377757fcf81c1a42ba9604c4ee7addeb77cb698e
+)
+
+Fillable data: Array
+(
+    [verify_token] => 166c9cc81494778b63839536377757fcf81c1a42ba9604c4ee7addeb77cb698e
+)
+
+Fields: Array
+(
+    [0] => verify_token
+)
+
+Values: Array
+(
+    [0] => 166c9cc81494778b63839536377757fcf81c1a42ba9604c4ee7addeb77cb698e
 )
 
 ========================
 
-=== DEBUG GETINPUT 2025-11-04 16:21:54 ===
+=== DEBUG GETINPUT 2025-11-05 02:56:54 ===
 POST data: Array
 (
-    [post_id] => 41
-    [comment] => this is good
+    [email] => haibabon@gmail.com
+    [password] => 123456789
 )
 
 GET data: Array
@@ -49,8 +98,459 @@ GET data: Array
 
 Merged data: Array
 (
-    [post_id] => 41
-    [comment] => this is good
+    [email] => haibabon@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-05 02:57:02 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fillable data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fields: Array
+(
+    [0] => is_active
+    [1] => verify_token
+)
+
+Values: Array
+(
+    [0] => 1
+    [1] => 
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-05 02:57:09 ===
+POST data: Array
+(
+    [email] => haibabon@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => haibabon@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-05 02:57:34 ===
+POST data: Array
+(
+    [username] => accmoi
+    [email] => accmoi@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => accmoi
+    [email] => accmoi@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-05 02:57:35 ===
+Table: users
+Original data: Array
+(
+    [username] => accmoi
+    [email] => accmoi@gmail.com
+    [password] => $2y$10$3.WLzF7HQWlJ23X.HKlnSOIz8Z4M8qg5l2NcrQ2ld66vZir4D5lBK
+    [permission] => 0
+    [is_active] => 0
+)
+
+Fillable data: Array
+(
+    [username] => accmoi
+    [email] => accmoi@gmail.com
+    [password] => $2y$10$3.WLzF7HQWlJ23X.HKlnSOIz8Z4M8qg5l2NcrQ2ld66vZir4D5lBK
+    [permission] => 0
+    [is_active] => 0
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => accmoi
+    [1] => accmoi@gmail.com
+    [2] => $2y$10$3.WLzF7HQWlJ23X.HKlnSOIz8Z4M8qg5l2NcrQ2ld66vZir4D5lBK
+    [3] => 0
+    [4] => 0
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-05 02:57:35 ===
+Table: users
+ID: 28
+Original data: Array
+(
+    [verify_token] => ef6fa925f0f68dd5d898aaf163fd398b21af0d55c60052248e4ae86602ff71df
+)
+
+Fillable data: Array
+(
+    [verify_token] => ef6fa925f0f68dd5d898aaf163fd398b21af0d55c60052248e4ae86602ff71df
+)
+
+Fields: Array
+(
+    [0] => verify_token
+)
+
+Values: Array
+(
+    [0] => ef6fa925f0f68dd5d898aaf163fd398b21af0d55c60052248e4ae86602ff71df
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-05 02:57:52 ===
+POST data: Array
+(
+    [email] => accmoi@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => accmoi@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-05 02:57:58 ===
+Table: users
+ID: 28
+Original data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fillable data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fields: Array
+(
+    [0] => is_active
+    [1] => verify_token
+)
+
+Values: Array
+(
+    [0] => 1
+    [1] => 
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-05 02:58:09 ===
+POST data: Array
+(
+    [email] => accmoi@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => accmoi@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-05 03:01:06 ===
+POST data: Array
+(
+    [email] => accmoi@gmail.com
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => accmoi@gmail.com
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-05 03:03:38 ===
+POST data: Array
+(
+    [email] => accmoi@gmail.com
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => accmoi@gmail.com
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-05 03:03:38 ===
+Table: users
+ID: 28
+Original data: Array
+(
+    [forgot_token] => 6bf08d1738ff39a2d49fc3599a2a9761ec4ed59a57b597ff2bde7e6babb8eafd
+    [forgot_token_expire] => 2025-11-05 04:03:38
+)
+
+Fillable data: Array
+(
+    [forgot_token] => 6bf08d1738ff39a2d49fc3599a2a9761ec4ed59a57b597ff2bde7e6babb8eafd
+    [forgot_token_expire] => 2025-11-05 04:03:38
+)
+
+Fields: Array
+(
+    [0] => forgot_token
+    [1] => forgot_token_expire
+)
+
+Values: Array
+(
+    [0] => 6bf08d1738ff39a2d49fc3599a2a9761ec4ed59a57b597ff2bde7e6babb8eafd
+    [1] => 2025-11-05 04:03:38
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-05 03:03:51 ===
+POST data: Array
+(
+    [email] => accmoi@gmail.com
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => accmoi@gmail.com
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-05 03:03:51 ===
+Table: users
+ID: 28
+Original data: Array
+(
+    [forgot_token] => 8eb5999d0b30f37f968e796ab5aa81d0c11ae6515bfabc268b90eb0fd625ab55
+    [forgot_token_expire] => 2025-11-05 04:03:51
+)
+
+Fillable data: Array
+(
+    [forgot_token] => 8eb5999d0b30f37f968e796ab5aa81d0c11ae6515bfabc268b90eb0fd625ab55
+    [forgot_token_expire] => 2025-11-05 04:03:51
+)
+
+Fields: Array
+(
+    [0] => forgot_token
+    [1] => forgot_token_expire
+)
+
+Values: Array
+(
+    [0] => 8eb5999d0b30f37f968e796ab5aa81d0c11ae6515bfabc268b90eb0fd625ab55
+    [1] => 2025-11-05 04:03:51
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-05 03:06:07 ===
+POST data: Array
+(
+    [email] => accmoi@gmail.com
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => accmoi@gmail.com
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-05 03:06:07 ===
+Table: users
+ID: 28
+Original data: Array
+(
+    [forgot_token] => e89e40adae48a019c11c03ddee264750c86be00cbdd8649e644ffd1644c223c3
+    [forgot_token_expire] => 2025-11-05 04:06:07
+)
+
+Fillable data: Array
+(
+    [forgot_token] => e89e40adae48a019c11c03ddee264750c86be00cbdd8649e644ffd1644c223c3
+    [forgot_token_expire] => 2025-11-05 04:06:07
+)
+
+Fields: Array
+(
+    [0] => forgot_token
+    [1] => forgot_token_expire
+)
+
+Values: Array
+(
+    [0] => e89e40adae48a019c11c03ddee264750c86be00cbdd8649e644ffd1644c223c3
+    [1] => 2025-11-05 04:06:07
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-05 03:06:27 ===
+POST data: Array
+(
+    [token] => e89e40adae48a019c11c03ddee264750c86be00cbdd8649e644ffd1644c223c3
+    [email] => accmoi@gmail.com
+    [password] => zxcvbnm9
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [token] => e89e40adae48a019c11c03ddee264750c86be00cbdd8649e644ffd1644c223c3
+    [email] => accmoi@gmail.com
+    [password] => zxcvbnm9
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-05 03:06:27 ===
+Table: users
+ID: 28
+Original data: Array
+(
+    [password] => $2y$10$4Fbm1iZbKZKnAqiAa8er4uh2TEGB6F9aHqlsMP49UMgQ4iAfC56/G
+)
+
+Fillable data: Array
+(
+    [password] => $2y$10$4Fbm1iZbKZKnAqiAa8er4uh2TEGB6F9aHqlsMP49UMgQ4iAfC56/G
+)
+
+Fields: Array
+(
+    [0] => password
+)
+
+Values: Array
+(
+    [0] => $2y$10$4Fbm1iZbKZKnAqiAa8er4uh2TEGB6F9aHqlsMP49UMgQ4iAfC56/G
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-05 03:06:27 ===
+Table: users
+ID: 28
+Original data: Array
+(
+    [forgot_token] => 
+    [forgot_token_expire] => 
+)
+
+Fillable data: Array
+(
+    [forgot_token] => 
+    [forgot_token_expire] => 
+)
+
+Fields: Array
+(
+    [0] => forgot_token
+    [1] => forgot_token_expire
+)
+
+Values: Array
+(
+    [0] => 
+    [1] => 
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-05 03:06:35 ===
+POST data: Array
+(
+    [email] => accmoi@gmail.com
+    [password] => zxcvbnm9
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => accmoi@gmail.com
+    [password] => zxcvbnm9
 )
 
 ========================

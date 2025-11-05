@@ -88,9 +88,21 @@ abstract class BaseModel
         $fields = array_keys($fillableData);
         $values = array_values($fillableData);
         
-
+        // Debug log
+        $debug_log = "=== DEBUG CREATE " . date('Y-m-d H:i:s') . " ===\n";
+        $debug_log .= "Table: {$this->table}\n";
+        $debug_log .= "Original data: " . print_r($data, true) . "\n";
+        $debug_log .= "Fillable data: " . print_r($fillableData, true) . "\n";
+        $debug_log .= "Fields: " . print_r($fields, true) . "\n";
+        $debug_log .= "Values: " . print_r($values, true) . "\n";
         
-        return $this->db->insert($this->table, $fields, $values);
+        $result = $this->db->insert($this->table, $fields, $values);
+        
+        $debug_log .= "Insert result: " . ($result ? 'SUCCESS' : 'FAILED') . "\n";
+        $debug_log .= "========================\n\n";
+        file_put_contents(__DIR__ . '/../../debug.log', $debug_log, FILE_APPEND);
+        
+        return $result;
     }
     
     /**

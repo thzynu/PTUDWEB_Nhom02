@@ -15,6 +15,8 @@ $router->get('/login', 'AuthController', 'loginForm');
 $router->post('/login', 'AuthController', 'login');
 $router->get('/register', 'AuthController', 'registerForm');
 $router->post('/register', 'AuthController', 'register');
+$router->post('/register/store', 'AuthController', 'register');
+$router->get('/verify-email', 'AuthController', 'verifyEmail');
 // Alternative register routes for testing
 $router->get('/signup', 'AuthController', 'registerForm');
 $router->post('/signup', 'AuthController', 'register');
@@ -23,7 +25,10 @@ $router->get('/logout', 'AuthController', 'logout');
 
 // Password reset routes
 $router->get('/forgot-password', 'AuthController', 'forgotPasswordForm');
+$router->get('/forgot', 'AuthController', 'forgotPasswordForm'); // Short URL
 $router->post('/forgot-password', 'AuthController', 'forgotPassword');
+$router->post('/forgot', 'AuthController', 'forgotPassword'); // Short URL
+$router->post('/forgot/request', 'AuthController', 'forgotPassword'); // Alternative URL
 $router->get('/reset-password', 'AuthController', 'resetPasswordForm');
 $router->post('/reset-password', 'AuthController', 'resetPassword');
 

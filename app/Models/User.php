@@ -12,7 +12,9 @@ class User extends BaseModel
 {
     protected $table = 'users';
     protected $fillable = [
-        'username', 'email', 'password', 'permission'
+        'username', 'email', 'password', 'permission',
+        'is_active', 'verify_token', 
+        'forgot_token', 'forgot_token_expire'
     ];
     protected $hidden = ['password'];
     
@@ -102,6 +104,48 @@ class User extends BaseModel
         
         $result = $this->db->select($sql, $params);
         return $result && $result->fetch();
+    }
+    
+    /**
+     * Get user by email and verification token
+     */
+    public function getByEmailAndToken($email, $token)
+    {
+        $sql = "SELECT * FROM users WHERE email = ? AND verify_token = ?";
+        $result = $this->db->select($sql, [$email, $token]);
+        
+        if ($result) {
+            return $result->fetch();
+        }
+        
+        return null;
+    }
+    
+    /**
+     * Get user by email and reset password token
+     */
+    public function getByEmailAndResetToken($email, $token)
+    {
+        $sql = "SELECT * FROM users WHERE email = ? AND forgot_token = ?";
+        $result = $this->db->select($sql, [$email, $token]);
+        
+        if ($result) {
+            return $result->fetch();
+        }
+        
+        return null;
+    }
+    
+    /**
+     * Activate user account
+     */
+    public function activateAccount($userId)
+    {
+        $data = [
+            'is_active' => 1,
+            'verify_token' => null
+        ];
+        return $this->update($userId, $data);
     }
     
     /**
