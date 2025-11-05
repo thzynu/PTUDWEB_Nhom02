@@ -1,0 +1,57 @@
+=== DEBUG GETINPUT 2025-11-04 16:21:23 ===
+POST data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-04 16:21:42 ===
+POST data: Array
+(
+    [post_id] => 41
+    [comment] => what the fuck
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [post_id] => 41
+    [comment] => what the fuck
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-04 16:21:54 ===
+POST data: Array
+(
+    [post_id] => 41
+    [comment] => this is good
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [post_id] => 41
+    [comment] => this is good
+)
+
+========================
+
