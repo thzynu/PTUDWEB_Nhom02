@@ -1564,3 +1564,1455 @@ Values: Array
 Insert result: SUCCESS
 ========================
 
+=== DEBUG GETINPUT 2025-11-06 15:40:53 ===
+POST data: Array
+(
+    [username] => thoai hao
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => thoai hao
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-06 15:40:53 ===
+Table: users
+Original data: Array
+(
+    [username] => thoai hao
+    [email] => thoaihao@gmail.com
+    [password] => $2y$10$Fl5uVxNgiIvcSw2ELm5DkeN3pRGSxDpHAv28IN3h44/o8ZrMLgthO
+    [permission] => user
+    [is_active] => 0
+)
+
+Fillable data: Array
+(
+    [username] => thoai hao
+    [email] => thoaihao@gmail.com
+    [password] => $2y$10$Fl5uVxNgiIvcSw2ELm5DkeN3pRGSxDpHAv28IN3h44/o8ZrMLgthO
+    [permission] => user
+    [is_active] => 0
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => thoai hao
+    [1] => thoaihao@gmail.com
+    [2] => $2y$10$Fl5uVxNgiIvcSw2ELm5DkeN3pRGSxDpHAv28IN3h44/o8ZrMLgthO
+    [3] => user
+    [4] => 0
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:40:53 ===
+Table: users
+ID: 32
+Original data: Array
+(
+    [verify_token] => 40ddf48b4b28f18729f5b1cd5b725d9aa0c9032507c6496868e91d57a4b4971d
+)
+
+Fillable data: Array
+(
+    [verify_token] => 40ddf48b4b28f18729f5b1cd5b725d9aa0c9032507c6496868e91d57a4b4971d
+)
+
+Fields: Array
+(
+    [0] => verify_token
+)
+
+Values: Array
+(
+    [0] => 40ddf48b4b28f18729f5b1cd5b725d9aa0c9032507c6496868e91d57a4b4971d
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:41:07 ===
+Table: users
+ID: 32
+Original data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fillable data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fields: Array
+(
+    [0] => is_active
+    [1] => verify_token
+)
+
+Values: Array
+(
+    [0] => 1
+    [1] => 
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:41:20 ===
+POST data: Array
+(
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:41:49 ===
+POST data: Array
+(
+    [post_id] => 41
+    [comment] => great article
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [post_id] => 41
+    [comment] => great article
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-06 15:41:51 ===
+Table: comments
+Original data: Array
+(
+    [user_id] => 32
+    [post_id] => 41
+    [comment] => great article
+    [status] => approved
+)
+
+Fillable data: Array
+(
+    [user_id] => 32
+    [post_id] => 41
+    [comment] => great article
+    [status] => approved
+)
+
+Fields: Array
+(
+    [0] => user_id
+    [1] => post_id
+    [2] => comment
+    [3] => status
+)
+
+Values: Array
+(
+    [0] => 32
+    [1] => 41
+    [2] => great article
+    [3] => approved
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:42:00 ===
+POST data: Array
+(
+    [post_id] => 41
+    [comment] => what the fuck
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [post_id] => 41
+    [comment] => what the fuck
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-06 15:42:03 ===
+Table: comments
+Original data: Array
+(
+    [user_id] => 32
+    [post_id] => 41
+    [comment] => what the fuck
+    [status] => unseen
+)
+
+Fillable data: Array
+(
+    [user_id] => 32
+    [post_id] => 41
+    [comment] => what the fuck
+    [status] => unseen
+)
+
+Fields: Array
+(
+    [0] => user_id
+    [1] => post_id
+    [2] => comment
+    [3] => status
+)
+
+Values: Array
+(
+    [0] => 32
+    [1] => 41
+    [2] => what the fuck
+    [3] => unseen
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:43:33 ===
+POST data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:44:10 ===
+POST data: Array
+(
+    [name] => Thể thao mới
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [name] => Thể thao mới
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:44:10 ===
+Table: categories
+ID: 16
+Original data: Array
+(
+    [name] => Thể thao mới
+    [updated_at] => 2025-11-06 15:44:10
+)
+
+Fillable data: Array
+(
+    [name] => Thể thao mới
+)
+
+Fields: Array
+(
+    [0] => name
+)
+
+Values: Array
+(
+    [0] => Thể thao mới
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:44:22 ===
+POST data: Array
+(
+    [name] => Nghiên cứu
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [name] => Nghiên cứu
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-06 15:44:22 ===
+Table: categories
+Original data: Array
+(
+    [name] => Nghiên cứu
+    [created_at] => 2025-11-06 15:44:22
+)
+
+Fillable data: Array
+(
+    [name] => Nghiên cứu
+)
+
+Fields: Array
+(
+    [0] => name
+)
+
+Values: Array
+(
+    [0] => Nghiên cứu
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:44:32 ===
+Table: users
+ID: 32
+Original data: Array
+(
+    [permission] => admin
+)
+
+Fillable data: Array
+(
+    [permission] => admin
+)
+
+Fields: Array
+(
+    [0] => permission
+)
+
+Values: Array
+(
+    [0] => admin
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:44:34 ===
+Table: users
+ID: 32
+Original data: Array
+(
+    [permission] => user
+)
+
+Fillable data: Array
+(
+    [permission] => user
+)
+
+Fields: Array
+(
+    [0] => permission
+)
+
+Values: Array
+(
+    [0] => user
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:44:40 ===
+Table: users
+ID: 32
+Original data: Array
+(
+    [permission] => journalist
+)
+
+Fillable data: Array
+(
+    [permission] => journalist
+)
+
+Fields: Array
+(
+    [0] => permission
+)
+
+Values: Array
+(
+    [0] => journalist
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:44:43 ===
+Table: users
+ID: 32
+Original data: Array
+(
+    [permission] => user
+)
+
+Fillable data: Array
+(
+    [permission] => user
+)
+
+Fields: Array
+(
+    [0] => permission
+)
+
+Values: Array
+(
+    [0] => user
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:52:01 ===
+POST data: Array
+(
+    [username] => tang thoai hao
+    [email] => haotang@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => tang thoai hao
+    [email] => haotang@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-06 15:52:01 ===
+Table: users
+Original data: Array
+(
+    [username] => tang thoai hao
+    [email] => haotang@gmail.com
+    [password] => $2y$10$AMJHaAWVTNMp2DKDZVFYneQfW2rh1eqqDPGrGquqJagD4KFPooJIa
+    [permission] => user
+    [is_active] => 0
+)
+
+Fillable data: Array
+(
+    [username] => tang thoai hao
+    [email] => haotang@gmail.com
+    [password] => $2y$10$AMJHaAWVTNMp2DKDZVFYneQfW2rh1eqqDPGrGquqJagD4KFPooJIa
+    [permission] => user
+    [is_active] => 0
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => tang thoai hao
+    [1] => haotang@gmail.com
+    [2] => $2y$10$AMJHaAWVTNMp2DKDZVFYneQfW2rh1eqqDPGrGquqJagD4KFPooJIa
+    [3] => user
+    [4] => 0
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:52:01 ===
+Table: users
+ID: 33
+Original data: Array
+(
+    [verify_token] => c0beae92a663d7d9f0e969faade1a5d22cf064a4a9d2749e762469188ce201b9
+)
+
+Fillable data: Array
+(
+    [verify_token] => c0beae92a663d7d9f0e969faade1a5d22cf064a4a9d2749e762469188ce201b9
+)
+
+Fields: Array
+(
+    [0] => verify_token
+)
+
+Values: Array
+(
+    [0] => c0beae92a663d7d9f0e969faade1a5d22cf064a4a9d2749e762469188ce201b9
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:52:33 ===
+POST data: Array
+(
+    [email] => haotang@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => haotang@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:52:44 ===
+POST data: Array
+(
+    [email] => haotang@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => haotang@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:53:52 ===
+POST data: Array
+(
+    [username] => thoaihao
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => thoaihao
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-06 15:53:52 ===
+Table: users
+Original data: Array
+(
+    [username] => thoaihao
+    [email] => thoaihao@gmail.com
+    [password] => $2y$10$dOYm9T1s4imglplBhASCqOwF5wLz8CFpXoOaMExUK.r7WlM3p5ekq
+    [permission] => user
+    [is_active] => 0
+)
+
+Fillable data: Array
+(
+    [username] => thoaihao
+    [email] => thoaihao@gmail.com
+    [password] => $2y$10$dOYm9T1s4imglplBhASCqOwF5wLz8CFpXoOaMExUK.r7WlM3p5ekq
+    [permission] => user
+    [is_active] => 0
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => thoaihao
+    [1] => thoaihao@gmail.com
+    [2] => $2y$10$dOYm9T1s4imglplBhASCqOwF5wLz8CFpXoOaMExUK.r7WlM3p5ekq
+    [3] => user
+    [4] => 0
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:53:52 ===
+Table: users
+ID: 34
+Original data: Array
+(
+    [verify_token] => 3da9bd222b40a464a72141f96fc3c897c2a0fab95bb3c96922cdcbae6147a02e
+)
+
+Fillable data: Array
+(
+    [verify_token] => 3da9bd222b40a464a72141f96fc3c897c2a0fab95bb3c96922cdcbae6147a02e
+)
+
+Fields: Array
+(
+    [0] => verify_token
+)
+
+Values: Array
+(
+    [0] => 3da9bd222b40a464a72141f96fc3c897c2a0fab95bb3c96922cdcbae6147a02e
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:54:03 ===
+Table: users
+ID: 34
+Original data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fillable data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fields: Array
+(
+    [0] => is_active
+    [1] => verify_token
+)
+
+Values: Array
+(
+    [0] => 1
+    [1] => 
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:54:14 ===
+POST data: Array
+(
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 15:59:43 ===
+POST data: Array
+(
+    [username] => thoaihao
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => thoaihao
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-06 15:59:43 ===
+Table: users
+Original data: Array
+(
+    [username] => thoaihao
+    [email] => thoaihao@gmail.com
+    [password] => $2y$10$wMljKg5zJW2Yxf1f.BOiDupPAIaoE6cv5z6dkHcihQe6H2g.GVHba
+    [permission] => user
+    [is_active] => 0
+)
+
+Fillable data: Array
+(
+    [username] => thoaihao
+    [email] => thoaihao@gmail.com
+    [password] => $2y$10$wMljKg5zJW2Yxf1f.BOiDupPAIaoE6cv5z6dkHcihQe6H2g.GVHba
+    [permission] => user
+    [is_active] => 0
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => thoaihao
+    [1] => thoaihao@gmail.com
+    [2] => $2y$10$wMljKg5zJW2Yxf1f.BOiDupPAIaoE6cv5z6dkHcihQe6H2g.GVHba
+    [3] => user
+    [4] => 0
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:59:43 ===
+Table: users
+ID: 35
+Original data: Array
+(
+    [verify_token] => 8f02cb1f49bd7b1e33075301e2bddee65eacec21dc2fac43eb32b722410c2e67
+)
+
+Fillable data: Array
+(
+    [verify_token] => 8f02cb1f49bd7b1e33075301e2bddee65eacec21dc2fac43eb32b722410c2e67
+)
+
+Fields: Array
+(
+    [0] => verify_token
+)
+
+Values: Array
+(
+    [0] => 8f02cb1f49bd7b1e33075301e2bddee65eacec21dc2fac43eb32b722410c2e67
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 15:59:54 ===
+Table: users
+ID: 35
+Original data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fillable data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fields: Array
+(
+    [0] => is_active
+    [1] => verify_token
+)
+
+Values: Array
+(
+    [0] => 1
+    [1] => 
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 16:00:05 ===
+POST data: Array
+(
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => thoaihao@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 16:00:15 ===
+POST data: Array
+(
+    [email] => thoaihao@gmail.com
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => thoaihao@gmail.com
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 16:00:15 ===
+Table: users
+ID: 35
+Original data: Array
+(
+    [forgot_token] => e99ee218a4ae695d3d9f21a067eb6bca59a64e36bb931b63cfe2c13c67b8d945
+    [forgot_token_expire] => 2025-11-06 17:00:15
+)
+
+Fillable data: Array
+(
+    [forgot_token] => e99ee218a4ae695d3d9f21a067eb6bca59a64e36bb931b63cfe2c13c67b8d945
+    [forgot_token_expire] => 2025-11-06 17:00:15
+)
+
+Fields: Array
+(
+    [0] => forgot_token
+    [1] => forgot_token_expire
+)
+
+Values: Array
+(
+    [0] => e99ee218a4ae695d3d9f21a067eb6bca59a64e36bb931b63cfe2c13c67b8d945
+    [1] => 2025-11-06 17:00:15
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 16:00:37 ===
+POST data: Array
+(
+    [token] => e99ee218a4ae695d3d9f21a067eb6bca59a64e36bb931b63cfe2c13c67b8d945
+    [email] => thoaihao@gmail.com
+    [password] => 987654321
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [token] => e99ee218a4ae695d3d9f21a067eb6bca59a64e36bb931b63cfe2c13c67b8d945
+    [email] => thoaihao@gmail.com
+    [password] => 987654321
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 16:00:37 ===
+Table: users
+ID: 35
+Original data: Array
+(
+    [password] => $2y$10$j1HAwAH7/DcdAtqE5nckPOD8mvNj7yiMKQCqra12skz253YFB3CgO
+)
+
+Fillable data: Array
+(
+    [password] => $2y$10$j1HAwAH7/DcdAtqE5nckPOD8mvNj7yiMKQCqra12skz253YFB3CgO
+)
+
+Fields: Array
+(
+    [0] => password
+)
+
+Values: Array
+(
+    [0] => $2y$10$j1HAwAH7/DcdAtqE5nckPOD8mvNj7yiMKQCqra12skz253YFB3CgO
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 16:00:37 ===
+Table: users
+ID: 35
+Original data: Array
+(
+    [forgot_token] => 
+    [forgot_token_expire] => 
+)
+
+Fillable data: Array
+(
+    [forgot_token] => 
+    [forgot_token_expire] => 
+)
+
+Fields: Array
+(
+    [0] => forgot_token
+    [1] => forgot_token_expire
+)
+
+Values: Array
+(
+    [0] => 
+    [1] => 
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 16:01:04 ===
+POST data: Array
+(
+    [email] => thoaihao@gmail.com
+    [password] => 987654321
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => thoaihao@gmail.com
+    [password] => 987654321
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 16:01:35 ===
+POST data: Array
+(
+    [post_id] => 41
+    [comment] => great article
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [post_id] => 41
+    [comment] => great article
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-06 16:01:37 ===
+Table: comments
+Original data: Array
+(
+    [user_id] => 35
+    [post_id] => 41
+    [comment] => great article
+    [status] => approved
+)
+
+Fillable data: Array
+(
+    [user_id] => 35
+    [post_id] => 41
+    [comment] => great article
+    [status] => approved
+)
+
+Fields: Array
+(
+    [0] => user_id
+    [1] => post_id
+    [2] => comment
+    [3] => status
+)
+
+Values: Array
+(
+    [0] => 35
+    [1] => 41
+    [2] => great article
+    [3] => approved
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG GETINPUT 2025-11-06 16:01:45 ===
+POST data: Array
+(
+    [post_id] => 41
+    [comment] => what the fuck
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [post_id] => 41
+    [comment] => what the fuck
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-06 16:01:48 ===
+Table: comments
+Original data: Array
+(
+    [user_id] => 35
+    [post_id] => 41
+    [comment] => what the fuck
+    [status] => unseen
+)
+
+Fillable data: Array
+(
+    [user_id] => 35
+    [post_id] => 41
+    [comment] => what the fuck
+    [status] => unseen
+)
+
+Fields: Array
+(
+    [0] => user_id
+    [1] => post_id
+    [2] => comment
+    [3] => status
+)
+
+Values: Array
+(
+    [0] => 35
+    [1] => 41
+    [2] => what the fuck
+    [3] => unseen
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG GETINPUT 2025-11-06 16:02:59 ===
+POST data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 16:03:30 ===
+POST data: Array
+(
+    [name] => Thể thao
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [name] => Thể thao
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 16:03:30 ===
+Table: categories
+ID: 16
+Original data: Array
+(
+    [name] => Thể thao
+    [updated_at] => 2025-11-06 16:03:30
+)
+
+Fillable data: Array
+(
+    [name] => Thể thao
+)
+
+Fields: Array
+(
+    [0] => name
+)
+
+Values: Array
+(
+    [0] => Thể thao
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 16:03:48 ===
+POST data: Array
+(
+    [name] => khoa học lượng tử
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [name] => khoa học lượng tử
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-06 16:03:48 ===
+Table: categories
+Original data: Array
+(
+    [name] => khoa học lượng tử
+    [created_at] => 2025-11-06 16:03:48
+)
+
+Fillable data: Array
+(
+    [name] => khoa học lượng tử
+)
+
+Fields: Array
+(
+    [0] => name
+)
+
+Values: Array
+(
+    [0] => khoa học lượng tử
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 16:04:13 ===
+Table: users
+ID: 35
+Original data: Array
+(
+    [permission] => admin
+)
+
+Fillable data: Array
+(
+    [permission] => admin
+)
+
+Fields: Array
+(
+    [0] => permission
+)
+
+Values: Array
+(
+    [0] => admin
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 16:04:25 ===
+Table: posts
+ID: 41
+Original data: Array
+(
+    [breaking_news] => 2
+)
+
+Fillable data: Array
+(
+    [breaking_news] => 2
+)
+
+Fields: Array
+(
+    [0] => breaking_news
+)
+
+Values: Array
+(
+    [0] => 2
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 16:04:26 ===
+Table: posts
+ID: 41
+Original data: Array
+(
+    [selected] => 2
+)
+
+Fillable data: Array
+(
+    [selected] => 2
+)
+
+Fields: Array
+(
+    [0] => selected
+)
+
+Values: Array
+(
+    [0] => 2
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 16:04:38 ===
+Table: comments
+ID: 77
+Original data: Array
+(
+    [status] => approved
+)
+
+Fillable data: Array
+(
+    [status] => approved
+)
+
+Fields: Array
+(
+    [0] => status
+)
+
+Values: Array
+(
+    [0] => approved
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-06 16:04:41 ===
+Table: comments
+ID: 77
+Original data: Array
+(
+    [status] => unseen
+)
+
+Fillable data: Array
+(
+    [status] => unseen
+)
+
+Fields: Array
+(
+    [0] => status
+)
+
+Values: Array
+(
+    [0] => unseen
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-06 16:05:15 ===
+POST data: Array
+(
+    [email] => vanh@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => vanh@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-06 16:06:30 ===
+Table: posts
+Original data: Array
+(
+    [title] => Xã hội  Biển Quy Nhơn nổi sóng, bão số 13 Kalmaegi đổ bộ Đắk Lắk - Gia Lai
+    [summary] => Chiều tối 6/11, bão số 13 với sức gió mạnh cấp 13, giật cấp 16, di chuyển nhanh theo hướng Tây Tây Bắc, đổ bộ khu vực Đắk Lắk - Gia Lai.
+    [body] => Cơ quan khí tượng cho hay trên biển, vùng gần tâm bão có gió mạnh cấp 12-14, giật cấp 16, sóng cao 8-10 m, biển động dữ dội. Khu vực từ Nam Đà Nẵng đến Đắk Lắk (bao gồm đặc khu Lý Sơn và Cù Lao Chàm) có gió cấp 8-11, sóng cao 4-7 m.
+
+Ven bờ từ Nam Quảng Trị đến Đắk Lắk có thể xuất hiện nước dâng do bão từ 0,5-1 m, gây ngập úng cục bộ tại vùng trũng thấp và nguy cơ sạt lở bờ biển.
+
+Trên đất liền, khu vực từ Nam Đà Nẵng đến Đắk Lắk có gió mạnh cấp 6-9, vùng gần tâm bão đi qua mạnh cấp 10-12, giật cấp 15, tập trung ở phía Đông Quảng Ngãi - Gia Lai và Bắc Đắk Lắk. Gió mạnh nhất được dự báo xảy ra từ chiều tối đến đêm 6/11.
+
+Trong cuộc họp ứng phó bão Kalmaegi, Chủ tịch UBND tỉnh Gia Lai Phạm Anh Tuấn yêu cầu thực hiện lệnh cấm người dân ra khỏi nhà từ lúc 15h30 còn xe cộ dừng lưu thông trên đường lúc 17h hôm nay để đảm bảo an toàn.
+
+"Đây là cơn bão rất lớn, có thể vượt xa dự đoán, vì vậy phải tập trung bảo vệ tính mạng người dân", ông Tuấn nói và yêu cầu các cơ quan, địa phương tiếp tục rà soát, tập trung vùng biển, vùng ngập lụt, vùng sạt lở, kiên quyết không cho người dân ở tàu thuyền.
+
+Từ tối ngày 6 đến 7/11, khu vực từ Đà Nẵng đến Đắk Lắk có mưa rất to, lượng mưa phổ biến 150-300 mm, cục bộ trên 500 mm. Các tỉnh từ Nam Quảng Trị đến Huế, Khánh Hòa và Lâm Đồng mưa 100-250 mm, có nơi vượt 400 mm.
+
+Từ ngày 7-8/11, mưa mở rộng ra Bắc Quảng Trị đến Thanh Hóa, lượng mưa 50-150 mm, cục bộ trên 200 mm. Dự báo mưa lớn giảm dần từ ngày 8/11.
+
+Cơ quan khí tượng cảnh báo khu vực từ Nam Quảng Trị đến Đắk Lắk cần đề phòng nước dâng cao kết hợp sóng lớn, gây ngập úng, sạt lở bờ biển và làm chậm thoát lũ. Toàn bộ tàu thuyền, khu nuôi trồng thủy sản trong vùng nguy hiểm đều có nguy cơ chịu tác động mạnh của gió lớn và sóng cao.
+    [cat_id] => 17
+    [user_id] => 21
+    [image] => public/post-image/2025-11-06-16-06-30.webp
+    [selected] => 1
+    [breaking_news] => 1
+    [status] => 1
+    [view] => 0
+    [created_at] => 2025-11-06 16:06:30
+)
+
+Fillable data: Array
+(
+    [title] => Xã hội  Biển Quy Nhơn nổi sóng, bão số 13 Kalmaegi đổ bộ Đắk Lắk - Gia Lai
+    [summary] => Chiều tối 6/11, bão số 13 với sức gió mạnh cấp 13, giật cấp 16, di chuyển nhanh theo hướng Tây Tây Bắc, đổ bộ khu vực Đắk Lắk - Gia Lai.
+    [body] => Cơ quan khí tượng cho hay trên biển, vùng gần tâm bão có gió mạnh cấp 12-14, giật cấp 16, sóng cao 8-10 m, biển động dữ dội. Khu vực từ Nam Đà Nẵng đến Đắk Lắk (bao gồm đặc khu Lý Sơn và Cù Lao Chàm) có gió cấp 8-11, sóng cao 4-7 m.
+
+Ven bờ từ Nam Quảng Trị đến Đắk Lắk có thể xuất hiện nước dâng do bão từ 0,5-1 m, gây ngập úng cục bộ tại vùng trũng thấp và nguy cơ sạt lở bờ biển.
+
+Trên đất liền, khu vực từ Nam Đà Nẵng đến Đắk Lắk có gió mạnh cấp 6-9, vùng gần tâm bão đi qua mạnh cấp 10-12, giật cấp 15, tập trung ở phía Đông Quảng Ngãi - Gia Lai và Bắc Đắk Lắk. Gió mạnh nhất được dự báo xảy ra từ chiều tối đến đêm 6/11.
+
+Trong cuộc họp ứng phó bão Kalmaegi, Chủ tịch UBND tỉnh Gia Lai Phạm Anh Tuấn yêu cầu thực hiện lệnh cấm người dân ra khỏi nhà từ lúc 15h30 còn xe cộ dừng lưu thông trên đường lúc 17h hôm nay để đảm bảo an toàn.
+
+"Đây là cơn bão rất lớn, có thể vượt xa dự đoán, vì vậy phải tập trung bảo vệ tính mạng người dân", ông Tuấn nói và yêu cầu các cơ quan, địa phương tiếp tục rà soát, tập trung vùng biển, vùng ngập lụt, vùng sạt lở, kiên quyết không cho người dân ở tàu thuyền.
+
+Từ tối ngày 6 đến 7/11, khu vực từ Đà Nẵng đến Đắk Lắk có mưa rất to, lượng mưa phổ biến 150-300 mm, cục bộ trên 500 mm. Các tỉnh từ Nam Quảng Trị đến Huế, Khánh Hòa và Lâm Đồng mưa 100-250 mm, có nơi vượt 400 mm.
+
+Từ ngày 7-8/11, mưa mở rộng ra Bắc Quảng Trị đến Thanh Hóa, lượng mưa 50-150 mm, cục bộ trên 200 mm. Dự báo mưa lớn giảm dần từ ngày 8/11.
+
+Cơ quan khí tượng cảnh báo khu vực từ Nam Quảng Trị đến Đắk Lắk cần đề phòng nước dâng cao kết hợp sóng lớn, gây ngập úng, sạt lở bờ biển và làm chậm thoát lũ. Toàn bộ tàu thuyền, khu nuôi trồng thủy sản trong vùng nguy hiểm đều có nguy cơ chịu tác động mạnh của gió lớn và sóng cao.
+    [cat_id] => 17
+    [user_id] => 21
+    [image] => public/post-image/2025-11-06-16-06-30.webp
+    [selected] => 1
+    [breaking_news] => 1
+    [status] => 1
+    [view] => 0
+)
+
+Fields: Array
+(
+    [0] => title
+    [1] => summary
+    [2] => body
+    [3] => cat_id
+    [4] => user_id
+    [5] => image
+    [6] => selected
+    [7] => breaking_news
+    [8] => status
+    [9] => view
+)
+
+Values: Array
+(
+    [0] => Xã hội  Biển Quy Nhơn nổi sóng, bão số 13 Kalmaegi đổ bộ Đắk Lắk - Gia Lai
+    [1] => Chiều tối 6/11, bão số 13 với sức gió mạnh cấp 13, giật cấp 16, di chuyển nhanh theo hướng Tây Tây Bắc, đổ bộ khu vực Đắk Lắk - Gia Lai.
+    [2] => Cơ quan khí tượng cho hay trên biển, vùng gần tâm bão có gió mạnh cấp 12-14, giật cấp 16, sóng cao 8-10 m, biển động dữ dội. Khu vực từ Nam Đà Nẵng đến Đắk Lắk (bao gồm đặc khu Lý Sơn và Cù Lao Chàm) có gió cấp 8-11, sóng cao 4-7 m.
+
+Ven bờ từ Nam Quảng Trị đến Đắk Lắk có thể xuất hiện nước dâng do bão từ 0,5-1 m, gây ngập úng cục bộ tại vùng trũng thấp và nguy cơ sạt lở bờ biển.
+
+Trên đất liền, khu vực từ Nam Đà Nẵng đến Đắk Lắk có gió mạnh cấp 6-9, vùng gần tâm bão đi qua mạnh cấp 10-12, giật cấp 15, tập trung ở phía Đông Quảng Ngãi - Gia Lai và Bắc Đắk Lắk. Gió mạnh nhất được dự báo xảy ra từ chiều tối đến đêm 6/11.
+
+Trong cuộc họp ứng phó bão Kalmaegi, Chủ tịch UBND tỉnh Gia Lai Phạm Anh Tuấn yêu cầu thực hiện lệnh cấm người dân ra khỏi nhà từ lúc 15h30 còn xe cộ dừng lưu thông trên đường lúc 17h hôm nay để đảm bảo an toàn.
+
+"Đây là cơn bão rất lớn, có thể vượt xa dự đoán, vì vậy phải tập trung bảo vệ tính mạng người dân", ông Tuấn nói và yêu cầu các cơ quan, địa phương tiếp tục rà soát, tập trung vùng biển, vùng ngập lụt, vùng sạt lở, kiên quyết không cho người dân ở tàu thuyền.
+
+Từ tối ngày 6 đến 7/11, khu vực từ Đà Nẵng đến Đắk Lắk có mưa rất to, lượng mưa phổ biến 150-300 mm, cục bộ trên 500 mm. Các tỉnh từ Nam Quảng Trị đến Huế, Khánh Hòa và Lâm Đồng mưa 100-250 mm, có nơi vượt 400 mm.
+
+Từ ngày 7-8/11, mưa mở rộng ra Bắc Quảng Trị đến Thanh Hóa, lượng mưa 50-150 mm, cục bộ trên 200 mm. Dự báo mưa lớn giảm dần từ ngày 8/11.
+
+Cơ quan khí tượng cảnh báo khu vực từ Nam Quảng Trị đến Đắk Lắk cần đề phòng nước dâng cao kết hợp sóng lớn, gây ngập úng, sạt lở bờ biển và làm chậm thoát lũ. Toàn bộ tàu thuyền, khu nuôi trồng thủy sản trong vùng nguy hiểm đều có nguy cơ chịu tác động mạnh của gió lớn và sóng cao.
+    [3] => 17
+    [4] => 21
+    [5] => public/post-image/2025-11-06-16-06-30.webp
+    [6] => 1
+    [7] => 1
+    [8] => 1
+    [9] => 0
+)
+
+Insert result: SUCCESS
+========================
+

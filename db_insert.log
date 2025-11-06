@@ -257,3 +257,384 @@ Result: SUCCESS
 Last Insert ID: 73
 ========================
 
+=== DB INSERT DEBUG 2025-11-06 15:40:53 ===
+Table: users
+SQL: INSERT INTO users(username, email, password, permission, is_active, created_at) VALUES ( :username, :email, :password, :permission, :is_active, now() )
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => thoai hao
+    [1] => thoaihao@gmail.com
+    [2] => $2y$10$Fl5uVxNgiIvcSw2ELm5DkeN3pRGSxDpHAv28IN3h44/o8ZrMLgthO
+    [3] => user
+    [4] => 0
+)
+
+Combined: Array
+(
+    [username] => thoai hao
+    [email] => thoaihao@gmail.com
+    [password] => $2y$10$Fl5uVxNgiIvcSw2ELm5DkeN3pRGSxDpHAv28IN3h44/o8ZrMLgthO
+    [permission] => user
+    [is_active] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 32
+========================
+
+=== DB INSERT DEBUG 2025-11-06 15:41:51 ===
+Table: comments
+SQL: INSERT INTO comments(user_id, post_id, comment, status, created_at) VALUES ( :user_id, :post_id, :comment, :status, now() )
+Fields: Array
+(
+    [0] => user_id
+    [1] => post_id
+    [2] => comment
+    [3] => status
+)
+
+Values: Array
+(
+    [0] => 32
+    [1] => 41
+    [2] => great article
+    [3] => approved
+)
+
+Combined: Array
+(
+    [user_id] => 32
+    [post_id] => 41
+    [comment] => great article
+    [status] => approved
+)
+
+Result: SUCCESS
+Last Insert ID: 74
+========================
+
+=== DB INSERT DEBUG 2025-11-06 15:42:03 ===
+Table: comments
+SQL: INSERT INTO comments(user_id, post_id, comment, status, created_at) VALUES ( :user_id, :post_id, :comment, :status, now() )
+Fields: Array
+(
+    [0] => user_id
+    [1] => post_id
+    [2] => comment
+    [3] => status
+)
+
+Values: Array
+(
+    [0] => 32
+    [1] => 41
+    [2] => what the fuck
+    [3] => unseen
+)
+
+Combined: Array
+(
+    [user_id] => 32
+    [post_id] => 41
+    [comment] => what the fuck
+    [status] => unseen
+)
+
+Result: SUCCESS
+Last Insert ID: 75
+========================
+
+=== DB INSERT DEBUG 2025-11-06 15:44:22 ===
+Table: categories
+SQL: INSERT INTO categories(name, created_at) VALUES ( :name, now() )
+Fields: Array
+(
+    [0] => name
+)
+
+Values: Array
+(
+    [0] => Nghiên cứu
+)
+
+Combined: Array
+(
+    [name] => Nghiên cứu
+)
+
+Result: SUCCESS
+Last Insert ID: 24
+========================
+
+=== DB INSERT DEBUG 2025-11-06 15:52:01 ===
+Table: users
+SQL: INSERT INTO users(username, email, password, permission, is_active, created_at) VALUES ( :username, :email, :password, :permission, :is_active, now() )
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => tang thoai hao
+    [1] => haotang@gmail.com
+    [2] => $2y$10$AMJHaAWVTNMp2DKDZVFYneQfW2rh1eqqDPGrGquqJagD4KFPooJIa
+    [3] => user
+    [4] => 0
+)
+
+Combined: Array
+(
+    [username] => tang thoai hao
+    [email] => haotang@gmail.com
+    [password] => $2y$10$AMJHaAWVTNMp2DKDZVFYneQfW2rh1eqqDPGrGquqJagD4KFPooJIa
+    [permission] => user
+    [is_active] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 33
+========================
+
+=== DB INSERT DEBUG 2025-11-06 15:53:52 ===
+Table: users
+SQL: INSERT INTO users(username, email, password, permission, is_active, created_at) VALUES ( :username, :email, :password, :permission, :is_active, now() )
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => thoaihao
+    [1] => thoaihao@gmail.com
+    [2] => $2y$10$dOYm9T1s4imglplBhASCqOwF5wLz8CFpXoOaMExUK.r7WlM3p5ekq
+    [3] => user
+    [4] => 0
+)
+
+Combined: Array
+(
+    [username] => thoaihao
+    [email] => thoaihao@gmail.com
+    [password] => $2y$10$dOYm9T1s4imglplBhASCqOwF5wLz8CFpXoOaMExUK.r7WlM3p5ekq
+    [permission] => user
+    [is_active] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 34
+========================
+
+=== DB INSERT DEBUG 2025-11-06 15:59:43 ===
+Table: users
+SQL: INSERT INTO users(username, email, password, permission, is_active, created_at) VALUES ( :username, :email, :password, :permission, :is_active, now() )
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => thoaihao
+    [1] => thoaihao@gmail.com
+    [2] => $2y$10$wMljKg5zJW2Yxf1f.BOiDupPAIaoE6cv5z6dkHcihQe6H2g.GVHba
+    [3] => user
+    [4] => 0
+)
+
+Combined: Array
+(
+    [username] => thoaihao
+    [email] => thoaihao@gmail.com
+    [password] => $2y$10$wMljKg5zJW2Yxf1f.BOiDupPAIaoE6cv5z6dkHcihQe6H2g.GVHba
+    [permission] => user
+    [is_active] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 35
+========================
+
+=== DB INSERT DEBUG 2025-11-06 16:01:37 ===
+Table: comments
+SQL: INSERT INTO comments(user_id, post_id, comment, status, created_at) VALUES ( :user_id, :post_id, :comment, :status, now() )
+Fields: Array
+(
+    [0] => user_id
+    [1] => post_id
+    [2] => comment
+    [3] => status
+)
+
+Values: Array
+(
+    [0] => 35
+    [1] => 41
+    [2] => great article
+    [3] => approved
+)
+
+Combined: Array
+(
+    [user_id] => 35
+    [post_id] => 41
+    [comment] => great article
+    [status] => approved
+)
+
+Result: SUCCESS
+Last Insert ID: 76
+========================
+
+=== DB INSERT DEBUG 2025-11-06 16:01:48 ===
+Table: comments
+SQL: INSERT INTO comments(user_id, post_id, comment, status, created_at) VALUES ( :user_id, :post_id, :comment, :status, now() )
+Fields: Array
+(
+    [0] => user_id
+    [1] => post_id
+    [2] => comment
+    [3] => status
+)
+
+Values: Array
+(
+    [0] => 35
+    [1] => 41
+    [2] => what the fuck
+    [3] => unseen
+)
+
+Combined: Array
+(
+    [user_id] => 35
+    [post_id] => 41
+    [comment] => what the fuck
+    [status] => unseen
+)
+
+Result: SUCCESS
+Last Insert ID: 77
+========================
+
+=== DB INSERT DEBUG 2025-11-06 16:03:48 ===
+Table: categories
+SQL: INSERT INTO categories(name, created_at) VALUES ( :name, now() )
+Fields: Array
+(
+    [0] => name
+)
+
+Values: Array
+(
+    [0] => khoa học lượng tử
+)
+
+Combined: Array
+(
+    [name] => khoa học lượng tử
+)
+
+Result: SUCCESS
+Last Insert ID: 25
+========================
+
+=== DB INSERT DEBUG 2025-11-06 16:06:30 ===
+Table: posts
+SQL: INSERT INTO posts(title, summary, body, cat_id, user_id, image, selected, breaking_news, status, view, created_at) VALUES ( :title, :summary, :body, :cat_id, :user_id, :image, :selected, :breaking_news, :status, :view, now() )
+Fields: Array
+(
+    [0] => title
+    [1] => summary
+    [2] => body
+    [3] => cat_id
+    [4] => user_id
+    [5] => image
+    [6] => selected
+    [7] => breaking_news
+    [8] => status
+    [9] => view
+)
+
+Values: Array
+(
+    [0] => Xã hội  Biển Quy Nhơn nổi sóng, bão số 13 Kalmaegi đổ bộ Đắk Lắk - Gia Lai
+    [1] => Chiều tối 6/11, bão số 13 với sức gió mạnh cấp 13, giật cấp 16, di chuyển nhanh theo hướng Tây Tây Bắc, đổ bộ khu vực Đắk Lắk - Gia Lai.
+    [2] => Cơ quan khí tượng cho hay trên biển, vùng gần tâm bão có gió mạnh cấp 12-14, giật cấp 16, sóng cao 8-10 m, biển động dữ dội. Khu vực từ Nam Đà Nẵng đến Đắk Lắk (bao gồm đặc khu Lý Sơn và Cù Lao Chàm) có gió cấp 8-11, sóng cao 4-7 m.
+
+Ven bờ từ Nam Quảng Trị đến Đắk Lắk có thể xuất hiện nước dâng do bão từ 0,5-1 m, gây ngập úng cục bộ tại vùng trũng thấp và nguy cơ sạt lở bờ biển.
+
+Trên đất liền, khu vực từ Nam Đà Nẵng đến Đắk Lắk có gió mạnh cấp 6-9, vùng gần tâm bão đi qua mạnh cấp 10-12, giật cấp 15, tập trung ở phía Đông Quảng Ngãi - Gia Lai và Bắc Đắk Lắk. Gió mạnh nhất được dự báo xảy ra từ chiều tối đến đêm 6/11.
+
+Trong cuộc họp ứng phó bão Kalmaegi, Chủ tịch UBND tỉnh Gia Lai Phạm Anh Tuấn yêu cầu thực hiện lệnh cấm người dân ra khỏi nhà từ lúc 15h30 còn xe cộ dừng lưu thông trên đường lúc 17h hôm nay để đảm bảo an toàn.
+
+"Đây là cơn bão rất lớn, có thể vượt xa dự đoán, vì vậy phải tập trung bảo vệ tính mạng người dân", ông Tuấn nói và yêu cầu các cơ quan, địa phương tiếp tục rà soát, tập trung vùng biển, vùng ngập lụt, vùng sạt lở, kiên quyết không cho người dân ở tàu thuyền.
+
+Từ tối ngày 6 đến 7/11, khu vực từ Đà Nẵng đến Đắk Lắk có mưa rất to, lượng mưa phổ biến 150-300 mm, cục bộ trên 500 mm. Các tỉnh từ Nam Quảng Trị đến Huế, Khánh Hòa và Lâm Đồng mưa 100-250 mm, có nơi vượt 400 mm.
+
+Từ ngày 7-8/11, mưa mở rộng ra Bắc Quảng Trị đến Thanh Hóa, lượng mưa 50-150 mm, cục bộ trên 200 mm. Dự báo mưa lớn giảm dần từ ngày 8/11.
+
+Cơ quan khí tượng cảnh báo khu vực từ Nam Quảng Trị đến Đắk Lắk cần đề phòng nước dâng cao kết hợp sóng lớn, gây ngập úng, sạt lở bờ biển và làm chậm thoát lũ. Toàn bộ tàu thuyền, khu nuôi trồng thủy sản trong vùng nguy hiểm đều có nguy cơ chịu tác động mạnh của gió lớn và sóng cao.
+    [3] => 17
+    [4] => 21
+    [5] => public/post-image/2025-11-06-16-06-30.webp
+    [6] => 1
+    [7] => 1
+    [8] => 1
+    [9] => 0
+)
+
+Combined: Array
+(
+    [title] => Xã hội  Biển Quy Nhơn nổi sóng, bão số 13 Kalmaegi đổ bộ Đắk Lắk - Gia Lai
+    [summary] => Chiều tối 6/11, bão số 13 với sức gió mạnh cấp 13, giật cấp 16, di chuyển nhanh theo hướng Tây Tây Bắc, đổ bộ khu vực Đắk Lắk - Gia Lai.
+    [body] => Cơ quan khí tượng cho hay trên biển, vùng gần tâm bão có gió mạnh cấp 12-14, giật cấp 16, sóng cao 8-10 m, biển động dữ dội. Khu vực từ Nam Đà Nẵng đến Đắk Lắk (bao gồm đặc khu Lý Sơn và Cù Lao Chàm) có gió cấp 8-11, sóng cao 4-7 m.
+
+Ven bờ từ Nam Quảng Trị đến Đắk Lắk có thể xuất hiện nước dâng do bão từ 0,5-1 m, gây ngập úng cục bộ tại vùng trũng thấp và nguy cơ sạt lở bờ biển.
+
+Trên đất liền, khu vực từ Nam Đà Nẵng đến Đắk Lắk có gió mạnh cấp 6-9, vùng gần tâm bão đi qua mạnh cấp 10-12, giật cấp 15, tập trung ở phía Đông Quảng Ngãi - Gia Lai và Bắc Đắk Lắk. Gió mạnh nhất được dự báo xảy ra từ chiều tối đến đêm 6/11.
+
+Trong cuộc họp ứng phó bão Kalmaegi, Chủ tịch UBND tỉnh Gia Lai Phạm Anh Tuấn yêu cầu thực hiện lệnh cấm người dân ra khỏi nhà từ lúc 15h30 còn xe cộ dừng lưu thông trên đường lúc 17h hôm nay để đảm bảo an toàn.
+
+"Đây là cơn bão rất lớn, có thể vượt xa dự đoán, vì vậy phải tập trung bảo vệ tính mạng người dân", ông Tuấn nói và yêu cầu các cơ quan, địa phương tiếp tục rà soát, tập trung vùng biển, vùng ngập lụt, vùng sạt lở, kiên quyết không cho người dân ở tàu thuyền.
+
+Từ tối ngày 6 đến 7/11, khu vực từ Đà Nẵng đến Đắk Lắk có mưa rất to, lượng mưa phổ biến 150-300 mm, cục bộ trên 500 mm. Các tỉnh từ Nam Quảng Trị đến Huế, Khánh Hòa và Lâm Đồng mưa 100-250 mm, có nơi vượt 400 mm.
+
+Từ ngày 7-8/11, mưa mở rộng ra Bắc Quảng Trị đến Thanh Hóa, lượng mưa 50-150 mm, cục bộ trên 200 mm. Dự báo mưa lớn giảm dần từ ngày 8/11.
+
+Cơ quan khí tượng cảnh báo khu vực từ Nam Quảng Trị đến Đắk Lắk cần đề phòng nước dâng cao kết hợp sóng lớn, gây ngập úng, sạt lở bờ biển và làm chậm thoát lũ. Toàn bộ tàu thuyền, khu nuôi trồng thủy sản trong vùng nguy hiểm đều có nguy cơ chịu tác động mạnh của gió lớn và sóng cao.
+    [cat_id] => 17
+    [user_id] => 21
+    [image] => public/post-image/2025-11-06-16-06-30.webp
+    [selected] => 1
+    [breaking_news] => 1
+    [status] => 1
+    [view] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 47
+========================
+

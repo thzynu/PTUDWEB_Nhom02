@@ -80,8 +80,6 @@ $router->post('/admin/users/{id}', 'Admin\UserController', 'update');
 $router->delete('/admin/users/{id}', 'Admin\UserController', 'destroy');
 $router->get('/admin/users/{id}/promote', 'Admin\UserController', 'promote');
 $router->get('/admin/users/{id}/demote', 'Admin\UserController', 'demote');
-$router->get('/admin/users/{id}/journalist/grant', 'Admin\UserController', 'grantJournalist');
-$router->get('/admin/users/{id}/journalist/revoke', 'Admin\UserController', 'revokeJournalist');
 
 // Admin Banners
 $router->get('/admin/banners', 'Admin\BannerController', 'index');
@@ -115,6 +113,15 @@ $router->get('/admin/menu/create', 'Admin\MenuController', 'create');
 $router->post('/admin/menu', 'Admin\MenuController', 'store');
 $router->get('/admin/menu/edit/{id}', 'Admin\MenuController', 'edit');
 $router->get('/admin/menu/delete/{id}', 'Admin\MenuController', 'destroy');
+
+// Admin Settings
+$router->get('/admin/settings', 'Admin\SettingController', 'index');
+$router->post('/admin/settings', 'Admin\SettingController', 'update');
+
+// Legacy web-setting routes (redirect to settings)
+$router->get('/admin/web-setting', 'Admin\SettingController', 'index');
+$router->get('/admin/web-setting/set', 'Admin\SettingController', 'index');
+$router->post('/admin/web-setting/store', 'Admin\SettingController', 'update');
 
 // API routes
 $router->get('/api/search', 'HomeController', 'handleAjaxSearch');

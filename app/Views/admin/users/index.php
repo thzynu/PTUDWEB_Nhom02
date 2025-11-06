@@ -32,8 +32,6 @@
                     <td>
                         <?php if($user['permission'] == 'admin') { ?>
                             <span class="badge bg-success">Quản trị</span>
-                        <?php } elseif($user['permission'] == 'journalist') { ?>
-                            <span class="badge bg-info">Nhà báo</span>
                         <?php } else { ?>
                             <span class="badge bg-primary">Thành viên</span>
                         <?php } ?>
@@ -42,11 +40,8 @@
                     <td>
                         <?php if($user['permission'] == 'user') { ?>   
                             <a role="button" class="btn btn-sm btn-success text-white" href="<?= url('admin/users/' . $user['id'] . '/promote') ?>" onclick="return confirm('Bạn có muốn cấp quyền quản trị cho người dùng này?')">Cấp quyền Admin</a>
-                            <a role="button" class="btn btn-sm btn-info text-white" href="<?= url('admin/users/' . $user['id'] . '/journalist/grant') ?>" onclick="return confirm('Bạn có muốn cấp quyền nhà báo cho người dùng này?')">Cấp quyền Journalist</a>
-                        <?php } elseif($user['permission'] == 'admin') { ?>
+                        <?php } else { ?>
                             <a role="button" class="btn btn-sm btn-warning text-white" href="<?= url('admin/users/' . $user['id'] . '/demote') ?>" onclick="return confirm('Bạn có muốn hủy quyền quản trị?')">Hủy quyền Admin</a>
-                        <?php } elseif($user['permission'] == 'journalist') { ?>
-                            <a role="button" class="btn btn-sm btn-warning text-white" href="<?= url('admin/users/' . $user['id'] . '/journalist/revoke') ?>" onclick="return confirm('Bạn có muốn thu hồi quyền nhà báo?')">Thu hồi quyền Journalist</a>
                         <?php } ?>
              
 

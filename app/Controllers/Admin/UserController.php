@@ -344,12 +344,8 @@ class UserController extends BaseController
                 return $this->redirect('admin/users', 'User not found', 'error');
             }
             
-            if ($user['permission'] == 'journalist') {
-                return $this->redirect('admin/users', 'User đã là nhà báo rồi', 'warning');
-            }
-            
-            // Update permission to journalist
-            $success = $this->userModel->update($id, ['permission' => 'journalist']);
+            // Update permission to journalist (permission = 2)
+            $success = $this->userModel->update($id, ['permission' => 2]);
             
             if ($success) {
                 return $this->redirect('admin/users', "Đã cấp quyền nhà báo cho {$user['username']}!", 'success');
@@ -373,12 +369,8 @@ class UserController extends BaseController
                 return $this->redirect('admin/users', 'User not found', 'error');
             }
             
-            if ($user['permission'] != 'journalist') {
-                return $this->redirect('admin/users', 'User không phải là nhà báo', 'warning');
-            }
-            
-            // Update permission back to user
-            $success = $this->userModel->update($id, ['permission' => 'user']);
+            // Update permission back to user (permission = 0)
+            $success = $this->userModel->update($id, ['permission' => 0]);
             
             if ($success) {
                 return $this->redirect('admin/users', "Đã thu hồi quyền nhà báo của {$user['username']}!", 'success');
