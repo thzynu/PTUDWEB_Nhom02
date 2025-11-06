@@ -1,0 +1,259 @@
+=== DB INSERT DEBUG 2025-11-06 14:56:15 ===
+Table: users
+SQL: INSERT INTO users(username, email, password, permission, is_active, created_at) VALUES ( :username, :email, :password, :permission, :is_active, now() )
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => thoaihao
+    [1] => thoaihao@gmail.com
+    [2] => $2y$10$XywgJeb6TvaXzgnbfbNBQ./sZsutT35m/.F8xro80j8eGC9Bzou7a
+    [3] => 0
+    [4] => 0
+)
+
+Combined: Array
+(
+    [username] => thoaihao
+    [email] => thoaihao@gmail.com
+    [password] => $2y$10$XywgJeb6TvaXzgnbfbNBQ./sZsutT35m/.F8xro80j8eGC9Bzou7a
+    [permission] => 0
+    [is_active] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 29
+========================
+
+=== DB INSERT DEBUG 2025-11-06 15:05:48 ===
+Table: users
+SQL: INSERT INTO users(username, email, password, permission, is_active, created_at) VALUES ( :username, :email, :password, :permission, :is_active, now() )
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => accmoi
+    [1] => accmoi@gmail.com
+    [2] => $2y$10$gmPWmtq.CqtNK8MgH4dNIOVCVd70LcFuJtFC4zAkhL1CIHiXTxd/K
+    [3] => user
+    [4] => 0
+)
+
+Combined: Array
+(
+    [username] => accmoi
+    [email] => accmoi@gmail.com
+    [password] => $2y$10$gmPWmtq.CqtNK8MgH4dNIOVCVd70LcFuJtFC4zAkhL1CIHiXTxd/K
+    [permission] => user
+    [is_active] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 30
+========================
+
+=== DB INSERT DEBUG 2025-11-06 15:06:56 ===
+Table: users
+SQL: INSERT INTO users(username, email, password, permission, is_active, created_at) VALUES ( :username, :email, :password, :permission, :is_active, now() )
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => accmoi
+    [1] => accmoi@gmail.com
+    [2] => $2y$10$uQ0tPvW4Q3Kuoaa0kWuI2ujeFsLySMH9lroYQPc7Tswr6yiSKNe96
+    [3] => user
+    [4] => 0
+)
+
+Combined: Array
+(
+    [username] => accmoi
+    [email] => accmoi@gmail.com
+    [password] => $2y$10$uQ0tPvW4Q3Kuoaa0kWuI2ujeFsLySMH9lroYQPc7Tswr6yiSKNe96
+    [permission] => user
+    [is_active] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 31
+========================
+
+=== DB INSERT DEBUG 2025-11-06 15:18:48 ===
+Table: posts
+SQL: INSERT INTO posts(title, summary, body, cat_id, user_id, image, selected, breaking_news, status, view, created_at) VALUES ( :title, :summary, :body, :cat_id, :user_id, :image, :selected, :breaking_news, :status, :view, now() )
+Fields: Array
+(
+    [0] => title
+    [1] => summary
+    [2] => body
+    [3] => cat_id
+    [4] => user_id
+    [5] => image
+    [6] => selected
+    [7] => breaking_news
+    [8] => status
+    [9] => view
+)
+
+Values: Array
+(
+    [0] => Biển Quy Nhơn nổi sóng, bão số 13 Kalmaegi đổ bộ Đắk Lắk - Gia Lai
+    [1] => Chiều tối 6/11, bão số 13 với sức gió mạnh cấp 13, giật cấp 16, di chuyển nhanh theo hướng Tây Tây Bắc, đổ bộ khu vực Đắk Lắk - Gia Lai.
+    [2] => Theo Trung tâm Dự báo Khí tượng Thủy văn Quốc gia, hồi 18h ngày 6/11, vị trí tâm bão số 13 (Kalmaegi) nằm trên vùng ven bờ biển Đắk Lắk - Gia Lai, với sức gió mạnh nhất cấp 13 (134-149 km/h),giật cấp 16. Trong tối nay, bão giữ hướng di chuyển Tây Tây Bắc, tốc độ nhanh, khoảng 30 km/h, đi vào đất liền.
+
+Đến 22h cùng ngày, bão đi sâu vào đất liền, sức gió giảm còn cấp 10, giật cấp 12.
+
+
+bao so 13 do bo anh 1
+Ảnh vệ tinh bão số 13 (Kalmaegi) lúc 18h ngày 6/11 ghi nhận tâm bão nằm ven bờ biển Đắk Lắk - Gia Lai. Bão giữ hướng di chuyển Tây Tây Bắc với tốc độ 30 km/h và đi sâu vào đất liền. Ảnh: NCHMF.
+Trước đó, do ảnh hưởng hoàn lưu bão, nhiều nơi đã có gió mạnh và mưa lớn. Trạm Lý Sơn (Quảng Ngãi) ghi nhận gió cấp 8, giật cấp 10; Dung Quất cấp 8, giật cấp 9; Hội An (Đà Nẵng) cấp 8, giật cấp 10.
+
+Một số khu vực ở miền Trung và Tây Nguyên có lượng mưa trên 100 mm như An Xuân (Đắk Lắk) 162 mm, Bồng Sơn (Gia Lai) 146 mm, Sa Huỳnh (Quảng Ngãi) 119 mm.
+
+bao so 13 do bo anh 2
+Bản đồ dự báo quỹ đạo và cường độ bão số 13 (Kalmaegi) lúc 16h ngày 6/11. Ảnh: NCHMF.
+Rạng sáng 7/11, khi tiến sang Nam Lào, bão suy yếu thành áp thấp nhiệt đới, gió cấp 7, giật cấp 9. Chiều cùng ngày, hoàn lưu bão di chuyển sang phía Đông Thái Lan và tan dần thành vùng áp thấp.
+
+Cơ quan khí tượng cho hay trên biển, vùng gần tâm bão có gió mạnh cấp 12-14, giật cấp 16, sóng cao 8-10 m, biển động dữ dội. Khu vực từ Nam Đà Nẵng đến Đắk Lắk (bao gồm đặc khu Lý Sơn và Cù Lao Chàm) có gió cấp 8-11, sóng cao 4-7 m.
+
+Ven bờ từ Nam Quảng Trị đến Đắk Lắk có thể xuất hiện nước dâng do bão từ 0,5-1 m, gây ngập úng cục bộ tại vùng trũng thấp và nguy cơ sạt lở bờ biển.
+
+Trên đất liền, khu vực từ Nam Đà Nẵng đến Đắk Lắk có gió mạnh cấp 6-9, vùng gần tâm bão đi qua mạnh cấp 10-12, giật cấp 15, tập trung ở phía Đông Quảng Ngãi - Gia Lai và Bắc Đắk Lắk. Gió mạnh nhất được dự báo xảy ra từ chiều tối đến đêm 6/11.
+
+Trong cuộc họp ứng phó bão Kalmaegi, Chủ tịch UBND tỉnh Gia Lai Phạm Anh Tuấn yêu cầu thực hiện lệnh cấm người dân ra khỏi nhà từ lúc 15h30 còn xe cộ dừng lưu thông trên đường lúc 17h hôm nay để đảm bảo an toàn.
+
+"Đây là cơn bão rất lớn, có thể vượt xa dự đoán, vì vậy phải tập trung bảo vệ tính mạng người dân", ông Tuấn nói và yêu cầu các cơ quan, địa phương tiếp tục rà soát, tập trung vùng biển, vùng ngập lụt, vùng sạt lở, kiên quyết không cho người dân ở tàu thuyền.
+    [3] => 17
+    [4] => 21
+    [5] => public/post-image/2025-11-06-15-18-48.webp
+    [6] => 0
+    [7] => 0
+    [8] => 1
+    [9] => 0
+)
+
+Combined: Array
+(
+    [title] => Biển Quy Nhơn nổi sóng, bão số 13 Kalmaegi đổ bộ Đắk Lắk - Gia Lai
+    [summary] => Chiều tối 6/11, bão số 13 với sức gió mạnh cấp 13, giật cấp 16, di chuyển nhanh theo hướng Tây Tây Bắc, đổ bộ khu vực Đắk Lắk - Gia Lai.
+    [body] => Theo Trung tâm Dự báo Khí tượng Thủy văn Quốc gia, hồi 18h ngày 6/11, vị trí tâm bão số 13 (Kalmaegi) nằm trên vùng ven bờ biển Đắk Lắk - Gia Lai, với sức gió mạnh nhất cấp 13 (134-149 km/h),giật cấp 16. Trong tối nay, bão giữ hướng di chuyển Tây Tây Bắc, tốc độ nhanh, khoảng 30 km/h, đi vào đất liền.
+
+Đến 22h cùng ngày, bão đi sâu vào đất liền, sức gió giảm còn cấp 10, giật cấp 12.
+
+
+bao so 13 do bo anh 1
+Ảnh vệ tinh bão số 13 (Kalmaegi) lúc 18h ngày 6/11 ghi nhận tâm bão nằm ven bờ biển Đắk Lắk - Gia Lai. Bão giữ hướng di chuyển Tây Tây Bắc với tốc độ 30 km/h và đi sâu vào đất liền. Ảnh: NCHMF.
+Trước đó, do ảnh hưởng hoàn lưu bão, nhiều nơi đã có gió mạnh và mưa lớn. Trạm Lý Sơn (Quảng Ngãi) ghi nhận gió cấp 8, giật cấp 10; Dung Quất cấp 8, giật cấp 9; Hội An (Đà Nẵng) cấp 8, giật cấp 10.
+
+Một số khu vực ở miền Trung và Tây Nguyên có lượng mưa trên 100 mm như An Xuân (Đắk Lắk) 162 mm, Bồng Sơn (Gia Lai) 146 mm, Sa Huỳnh (Quảng Ngãi) 119 mm.
+
+bao so 13 do bo anh 2
+Bản đồ dự báo quỹ đạo và cường độ bão số 13 (Kalmaegi) lúc 16h ngày 6/11. Ảnh: NCHMF.
+Rạng sáng 7/11, khi tiến sang Nam Lào, bão suy yếu thành áp thấp nhiệt đới, gió cấp 7, giật cấp 9. Chiều cùng ngày, hoàn lưu bão di chuyển sang phía Đông Thái Lan và tan dần thành vùng áp thấp.
+
+Cơ quan khí tượng cho hay trên biển, vùng gần tâm bão có gió mạnh cấp 12-14, giật cấp 16, sóng cao 8-10 m, biển động dữ dội. Khu vực từ Nam Đà Nẵng đến Đắk Lắk (bao gồm đặc khu Lý Sơn và Cù Lao Chàm) có gió cấp 8-11, sóng cao 4-7 m.
+
+Ven bờ từ Nam Quảng Trị đến Đắk Lắk có thể xuất hiện nước dâng do bão từ 0,5-1 m, gây ngập úng cục bộ tại vùng trũng thấp và nguy cơ sạt lở bờ biển.
+
+Trên đất liền, khu vực từ Nam Đà Nẵng đến Đắk Lắk có gió mạnh cấp 6-9, vùng gần tâm bão đi qua mạnh cấp 10-12, giật cấp 15, tập trung ở phía Đông Quảng Ngãi - Gia Lai và Bắc Đắk Lắk. Gió mạnh nhất được dự báo xảy ra từ chiều tối đến đêm 6/11.
+
+Trong cuộc họp ứng phó bão Kalmaegi, Chủ tịch UBND tỉnh Gia Lai Phạm Anh Tuấn yêu cầu thực hiện lệnh cấm người dân ra khỏi nhà từ lúc 15h30 còn xe cộ dừng lưu thông trên đường lúc 17h hôm nay để đảm bảo an toàn.
+
+"Đây là cơn bão rất lớn, có thể vượt xa dự đoán, vì vậy phải tập trung bảo vệ tính mạng người dân", ông Tuấn nói và yêu cầu các cơ quan, địa phương tiếp tục rà soát, tập trung vùng biển, vùng ngập lụt, vùng sạt lở, kiên quyết không cho người dân ở tàu thuyền.
+    [cat_id] => 17
+    [user_id] => 21
+    [image] => public/post-image/2025-11-06-15-18-48.webp
+    [selected] => 0
+    [breaking_news] => 0
+    [status] => 1
+    [view] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 46
+========================
+
+=== DB INSERT DEBUG 2025-11-06 15:19:36 ===
+Table: comments
+SQL: INSERT INTO comments(user_id, post_id, comment, status, created_at) VALUES ( :user_id, :post_id, :comment, :status, now() )
+Fields: Array
+(
+    [0] => user_id
+    [1] => post_id
+    [2] => comment
+    [3] => status
+)
+
+Values: Array
+(
+    [0] => 21
+    [1] => 46
+    [2] => HAY ĐẤY !!!
+    [3] => approved
+)
+
+Combined: Array
+(
+    [user_id] => 21
+    [post_id] => 46
+    [comment] => HAY ĐẤY !!!
+    [status] => approved
+)
+
+Result: SUCCESS
+Last Insert ID: 72
+========================
+
+=== DB INSERT DEBUG 2025-11-06 15:25:45 ===
+Table: comments
+SQL: INSERT INTO comments(user_id, post_id, comment, status, created_at) VALUES ( :user_id, :post_id, :comment, :status, now() )
+Fields: Array
+(
+    [0] => user_id
+    [1] => post_id
+    [2] => comment
+    [3] => status
+)
+
+Values: Array
+(
+    [0] => 21
+    [1] => 11
+    [2] => great !!!
+    [3] => approved
+)
+
+Combined: Array
+(
+    [user_id] => 21
+    [post_id] => 11
+    [comment] => great !!!
+    [status] => approved
+)
+
+Result: SUCCESS
+Last Insert ID: 73
+========================
+

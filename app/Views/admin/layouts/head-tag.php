@@ -754,21 +754,6 @@
                     </a>
                 </div>
             </div>
-
-            <!-- System -->
-            <div class="nav-section">
-                <div class="nav-section-title">
-                    <span>SYSTEM</span>
-                </div>
-                <div class="nav-item">
-                    <a href="<?= url('admin/settings') ?>" class="nav-link">
-                        <div class="nav-icon">
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <span class="nav-text">Settings</span>
-                    </a>
-                </div>
-            </div>
         </nav>
 
         <!-- Sidebar Footer -->

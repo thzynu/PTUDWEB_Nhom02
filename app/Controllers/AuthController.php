@@ -162,7 +162,7 @@ class AuthController extends BaseController
             'username' => $this->sanitize($input['username']),
             'email' => $this->sanitize($input['email']),
             'password' => $input['password'],
-            'permission' => 0, // Regular user
+            'permission' => 'user', // Regular user (default role)
             'is_active' => 0 // Not active until email verified
         ];
         
