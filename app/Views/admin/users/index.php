@@ -46,7 +46,10 @@
              
 
                 <a role="button" class="btn btn-sm btn-primary text-white" href="<?= url('admin/users/' . $user['id'] . '/edit') ?>">Sửa</a>
-                <a role="button" class="btn btn-sm btn-danger text-white" href="<?= url('admin/users/' . $user['id']) ?>" onclick="return confirm('Bạn có chắc chắn không?')">Xóa</a>
+                <form style="display: inline-block;" method="POST" action="<?= url('admin/users/' . $user['id']) ?>" onsubmit="return confirm('Bạn có chắc chắn muốn xóa user này không?')">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-sm btn-danger text-white">Xóa</button>
+                </form>
                 </td>
                 </tr>
 
