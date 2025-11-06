@@ -95,6 +95,12 @@ class Router
     public function dispatch()
     {
         $requestMethod = $_SERVER['REQUEST_METHOD'];
+        
+        // Check for method spoofing
+        if ($requestMethod === 'POST' && isset($_POST['_method'])) {
+            $requestMethod = strtoupper($_POST['_method']);
+        }
+        
         $requestUri = $this->getRequestUri();
         
         $route = $this->matchRoute($requestMethod, $requestUri);
