@@ -118,7 +118,7 @@
 
                                     <div class="mb-3">
                                         <label for="username" class="form-label fw-semibold">
-                                            <i class="fas fa-user me-2"></i>Username
+                                            <i class="fas fa-user me-2"></i>Tên đăng nhập
                                         </label>
                                         <input type="text" 
                                                class="form-control" 
@@ -134,7 +134,7 @@
 
                                     <div class="mb-3">
                                         <label for="email" class="form-label fw-semibold">
-                                            <i class="fas fa-envelope me-2"></i>Email Address
+                                            <i class="fas fa-envelope me-2"></i>Địa chỉ email
                                         </label>
                                         <input type="email" 
                                                class="form-control" 
@@ -150,7 +150,7 @@
 
                                     <div class="mb-3">
                                         <label for="password" class="form-label fw-semibold">
-                                            <i class="fas fa-lock me-2"></i>Password
+                                            <i class="fas fa-lock me-2"></i>Mật khẩu
                                         </label>
                                         <div class="position-relative">
                                             <input type="password" 
@@ -172,7 +172,7 @@
                                     </div>
 
                                     <button type="submit" class="btn btn-primary w-100 mb-3">
-                                        <i class="fas fa-user-plus me-2"></i>Register
+                                        <i class="fas fa-user-plus me-2"></i>Đăng ký
                                     </button>
 
                                     <div class="text-center">
@@ -198,9 +198,9 @@
                                 <div class="news-icon">
                                     <i class="fas fa-users"></i>
                                 </div>
-                                <h2 class="fw-bold mb-3">Join Our Community</h2>
+                                <h2 class="fw-bold mb-3">Tham gia cộng đồng của chúng tôi</h2>
                                 <p class="mb-4">
-                                    Get access to exclusive content, personalized news feed, and connect with fellow readers.
+                                    Nhận quyền truy cập vào nội dung độc quyền, nguồn tin tức cá nhân hóa và kết nối với những độc giả khác.
                                 </p>
                                 <div class="d-flex justify-content-center gap-4">
                                     <div class="text-center">

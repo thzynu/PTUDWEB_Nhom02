@@ -1,0 +1,1480 @@
+=== DEBUG GETINPUT 2025-11-08 15:54:03 ===
+POST data: Array
+(
+    [username] => vanh
+    [email] => vanh123@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => vanh
+    [email] => vanh123@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 15:55:34 ===
+POST data: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-08 15:55:34 ===
+Table: users
+Original data: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [password] => $2y$10$LOiRTnpR01ANF67qoRseJeKfbf7sfvhCQAzJw/qCfAKXTbVCJccaW
+    [permission] => 0
+    [is_active] => 0
+)
+
+Fillable data: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [password] => $2y$10$LOiRTnpR01ANF67qoRseJeKfbf7sfvhCQAzJw/qCfAKXTbVCJccaW
+    [permission] => 0
+    [is_active] => 0
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => vanh123
+    [1] => vanh123@gmail.com
+    [2] => $2y$10$LOiRTnpR01ANF67qoRseJeKfbf7sfvhCQAzJw/qCfAKXTbVCJccaW
+    [3] => 0
+    [4] => 0
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 15:55:34 ===
+Table: users
+ID: 26
+Original data: Array
+(
+    [verify_token] => 360adb2d9d0e5b7324afa686850f4666686ff93a16deddfd7125ee9ee0b92ad0
+)
+
+Fillable data: Array
+(
+    [verify_token] => 360adb2d9d0e5b7324afa686850f4666686ff93a16deddfd7125ee9ee0b92ad0
+)
+
+Fields: Array
+(
+    [0] => verify_token
+)
+
+Values: Array
+(
+    [0] => 360adb2d9d0e5b7324afa686850f4666686ff93a16deddfd7125ee9ee0b92ad0
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 15:55:46 ===
+Table: users
+ID: 26
+Original data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fillable data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fields: Array
+(
+    [0] => is_active
+    [1] => verify_token
+)
+
+Values: Array
+(
+    [0] => 1
+    [1] => 
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 15:55:56 ===
+POST data: Array
+(
+    [email] => vanh123@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => vanh123@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 15:56:15 ===
+POST data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 15:57:41 ===
+POST data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-08 15:57:41 ===
+Table: users
+Original data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [password] => $2y$10$8JGRIUNizbguZeuw1VGAZOVt8K6BN2sQGJlbXRSj30tqLR9dAXD16
+    [permission] => 0
+    [is_active] => 0
+)
+
+Fillable data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [password] => $2y$10$8JGRIUNizbguZeuw1VGAZOVt8K6BN2sQGJlbXRSj30tqLR9dAXD16
+    [permission] => 0
+    [is_active] => 0
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => chothanhvy
+    [1] => chothanhvy@gmail.com
+    [2] => $2y$10$8JGRIUNizbguZeuw1VGAZOVt8K6BN2sQGJlbXRSj30tqLR9dAXD16
+    [3] => 0
+    [4] => 0
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 15:57:42 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [verify_token] => f0e88e34e7a61ce547ed5fe3d14127837da95e2511d2a94d4ed595522fa37d19
+)
+
+Fillable data: Array
+(
+    [verify_token] => f0e88e34e7a61ce547ed5fe3d14127837da95e2511d2a94d4ed595522fa37d19
+)
+
+Fields: Array
+(
+    [0] => verify_token
+)
+
+Values: Array
+(
+    [0] => f0e88e34e7a61ce547ed5fe3d14127837da95e2511d2a94d4ed595522fa37d19
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 15:57:55 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fillable data: Array
+(
+    [is_active] => 1
+    [verify_token] => 
+)
+
+Fields: Array
+(
+    [0] => is_active
+    [1] => verify_token
+)
+
+Values: Array
+(
+    [0] => 1
+    [1] => 
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 15:58:10 ===
+POST data: Array
+(
+    [email] => chothanhvy@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => chothanhvy@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 15:58:49 ===
+POST data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 15:59:06 ===
+POST data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER UPDATE 2025-11-08 15:59:06 ===
+User ID: 27
+Raw POST: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Data received: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Permission value: journalist
+Permission debug: journalist
+========================
+
+=== DEBUG VALIDATION 2025-11-08 15:59:06 ===
+Validation errors: Array
+(
+)
+
+Has errors: NO
+========================
+
+=== DEBUG BEFORE UPDATE 2025-11-08 15:59:06 ===
+About to call updateUser with ID: 27
+Data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER MODEL UPDATE 2025-11-08 15:59:06 ===
+User ID: 27
+Data for update: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 15:59:06 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Fillable data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => permission
+)
+
+Values: Array
+(
+    [0] => chothanhvy
+    [1] => chothanhvy@gmail.com
+    [2] => journalist
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 15:59:14 ===
+POST data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER UPDATE 2025-11-08 15:59:14 ===
+User ID: 27
+Raw POST: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Data received: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Permission value: journalist
+Permission debug: journalist
+========================
+
+=== DEBUG VALIDATION 2025-11-08 15:59:14 ===
+Validation errors: Array
+(
+)
+
+Has errors: NO
+========================
+
+=== DEBUG BEFORE UPDATE 2025-11-08 15:59:14 ===
+About to call updateUser with ID: 27
+Data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER MODEL UPDATE 2025-11-08 15:59:14 ===
+User ID: 27
+Data for update: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 15:59:14 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Fillable data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => permission
+)
+
+Values: Array
+(
+    [0] => chothanhvy
+    [1] => chothanhvy@gmail.com
+    [2] => journalist
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 15:59:26 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [permission] => user
+)
+
+Fillable data: Array
+(
+    [permission] => user
+)
+
+Fields: Array
+(
+    [0] => permission
+)
+
+Values: Array
+(
+    [0] => user
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 15:59:30 ===
+POST data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER UPDATE 2025-11-08 15:59:30 ===
+User ID: 27
+Raw POST: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Data received: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Permission value: journalist
+Permission debug: journalist
+========================
+
+=== DEBUG VALIDATION 2025-11-08 15:59:30 ===
+Validation errors: Array
+(
+)
+
+Has errors: NO
+========================
+
+=== DEBUG BEFORE UPDATE 2025-11-08 15:59:30 ===
+About to call updateUser with ID: 27
+Data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER MODEL UPDATE 2025-11-08 15:59:30 ===
+User ID: 27
+Data for update: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 15:59:30 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Fillable data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => permission
+)
+
+Values: Array
+(
+    [0] => chothanhvy
+    [1] => chothanhvy@gmail.com
+    [2] => journalist
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 15:59:46 ===
+POST data: Array
+(
+    [email] => chothanhvy@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => chothanhvy@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-08 16:00:58 ===
+Table: posts
+Original data: Array
+(
+    [title] => Quảng Ngãi: Cả 3 người mất tích trên biển Lý Sơn đã được tìm thấy và còn sống
+    [summary] => ádasd
+    [body] => Quảng Ngãi: Cả 3 người mất tích trên biển Lý Sơn đã được tìm thấy và còn sống
+    [cat_id] => 22
+    [user_id] => 27
+    [image] => public/post-image/2025-11-08-16-00-58.png
+    [selected] => 0
+    [breaking_news] => 0
+    [status] => 1
+    [view] => 0
+    [created_at] => 2025-11-08 16:00:58
+)
+
+Fillable data: Array
+(
+    [title] => Quảng Ngãi: Cả 3 người mất tích trên biển Lý Sơn đã được tìm thấy và còn sống
+    [summary] => ádasd
+    [body] => Quảng Ngãi: Cả 3 người mất tích trên biển Lý Sơn đã được tìm thấy và còn sống
+    [cat_id] => 22
+    [user_id] => 27
+    [image] => public/post-image/2025-11-08-16-00-58.png
+    [selected] => 0
+    [breaking_news] => 0
+    [status] => 1
+    [view] => 0
+)
+
+Fields: Array
+(
+    [0] => title
+    [1] => summary
+    [2] => body
+    [3] => cat_id
+    [4] => user_id
+    [5] => image
+    [6] => selected
+    [7] => breaking_news
+    [8] => status
+    [9] => view
+)
+
+Values: Array
+(
+    [0] => Quảng Ngãi: Cả 3 người mất tích trên biển Lý Sơn đã được tìm thấy và còn sống
+    [1] => ádasd
+    [2] => Quảng Ngãi: Cả 3 người mất tích trên biển Lý Sơn đã được tìm thấy và còn sống
+    [3] => 22
+    [4] => 27
+    [5] => public/post-image/2025-11-08-16-00-58.png
+    [6] => 0
+    [7] => 0
+    [8] => 1
+    [9] => 0
+)
+
+Insert result: SUCCESS
+========================
+
+=== DEBUG GETINPUT 2025-11-08 16:01:32 ===
+POST data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 16:03:58 ===
+POST data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 16:07:24 ===
+POST data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+========================
+
+=== DEBUG USER UPDATE 2025-11-08 16:07:24 ===
+User ID: 27
+Raw POST: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+Data received: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+Permission value: user
+Permission debug: user
+========================
+
+=== DEBUG VALIDATION 2025-11-08 16:07:24 ===
+Validation errors: Array
+(
+)
+
+Has errors: NO
+========================
+
+=== DEBUG BEFORE UPDATE 2025-11-08 16:07:24 ===
+About to call updateUser with ID: 27
+Data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+========================
+
+=== DEBUG USER MODEL UPDATE 2025-11-08 16:07:24 ===
+User ID: 27
+Data for update: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 16:07:24 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+Fillable data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => permission
+)
+
+Values: Array
+(
+    [0] => chothanhvy
+    [1] => chothanhvy@gmail.com
+    [2] => user
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 16:07:27 ===
+POST data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER UPDATE 2025-11-08 16:07:27 ===
+User ID: 27
+Raw POST: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Data received: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Permission value: journalist
+Permission debug: journalist
+========================
+
+=== DEBUG VALIDATION 2025-11-08 16:07:27 ===
+Validation errors: Array
+(
+)
+
+Has errors: NO
+========================
+
+=== DEBUG BEFORE UPDATE 2025-11-08 16:07:27 ===
+About to call updateUser with ID: 27
+Data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER MODEL UPDATE 2025-11-08 16:07:27 ===
+User ID: 27
+Data for update: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 16:07:27 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Fillable data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => permission
+)
+
+Values: Array
+(
+    [0] => chothanhvy
+    [1] => chothanhvy@gmail.com
+    [2] => journalist
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 16:08:39 ===
+POST data: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER UPDATE 2025-11-08 16:08:39 ===
+User ID: 26
+Raw POST: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Data received: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Permission value: journalist
+Permission debug: journalist
+========================
+
+=== DEBUG VALIDATION 2025-11-08 16:08:39 ===
+Validation errors: Array
+(
+)
+
+Has errors: NO
+========================
+
+=== DEBUG BEFORE UPDATE 2025-11-08 16:08:39 ===
+About to call updateUser with ID: 26
+Data: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER MODEL UPDATE 2025-11-08 16:08:39 ===
+User ID: 26
+Data for update: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 16:08:39 ===
+Table: users
+ID: 26
+Original data: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Fillable data: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [permission] => journalist
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => permission
+)
+
+Values: Array
+(
+    [0] => vanh123
+    [1] => vanh123@gmail.com
+    [2] => journalist
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 16:08:44 ===
+POST data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+========================
+
+=== DEBUG USER UPDATE 2025-11-08 16:08:44 ===
+User ID: 27
+Raw POST: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+Data received: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+Permission value: user
+Permission debug: user
+========================
+
+=== DEBUG VALIDATION 2025-11-08 16:08:44 ===
+Validation errors: Array
+(
+)
+
+Has errors: NO
+========================
+
+=== DEBUG BEFORE UPDATE 2025-11-08 16:08:44 ===
+About to call updateUser with ID: 27
+Data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+========================
+
+=== DEBUG USER MODEL UPDATE 2025-11-08 16:08:44 ===
+User ID: 27
+Data for update: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 16:08:44 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+    [permission_debug] => user
+)
+
+Fillable data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => user
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => permission
+)
+
+Values: Array
+(
+    [0] => chothanhvy
+    [1] => chothanhvy@gmail.com
+    [2] => user
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 16:27:40 ===
+POST data: Array
+(
+    [email] => chothanhvy@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => chothanhvy@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 16:28:24 ===
+POST data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => onlinenewssite@admin.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 16:28:32 ===
+POST data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER UPDATE 2025-11-08 16:28:32 ===
+User ID: 27
+Raw POST: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Data received: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Permission value: journalist
+Permission debug: journalist
+========================
+
+=== DEBUG VALIDATION 2025-11-08 16:28:32 ===
+Validation errors: Array
+(
+)
+
+Has errors: NO
+========================
+
+=== DEBUG BEFORE UPDATE 2025-11-08 16:28:32 ===
+About to call updateUser with ID: 27
+Data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG USER MODEL UPDATE 2025-11-08 16:28:32 ===
+User ID: 27
+Data for update: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+========================
+
+=== DEBUG BASEMODEL UPDATE 2025-11-08 16:28:32 ===
+Table: users
+ID: 27
+Original data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+    [permission_debug] => journalist
+)
+
+Fillable data: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [permission] => journalist
+)
+
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => permission
+)
+
+Values: Array
+(
+    [0] => chothanhvy
+    [1] => chothanhvy@gmail.com
+    [2] => journalist
+)
+
+========================
+
+=== DEBUG GETINPUT 2025-11-08 16:29:53 ===
+POST data: Array
+(
+    [email] => chothanhvy@gmail.com
+    [password] => 123456789
+)
+
+GET data: Array
+(
+)
+
+Merged data: Array
+(
+    [email] => chothanhvy@gmail.com
+    [password] => 123456789
+)
+
+========================
+
+=== DEBUG CREATE 2025-11-08 16:30:19 ===
+Table: posts
+Original data: Array
+(
+    [title] => Quảng Ngãi bão vl
+    [summary] => bão vc
+    [body] => ádasdasd
+    [cat_id] => 22
+    [user_id] => 27
+    [image] => public/post-image/2025-11-08-16-30-19.png
+    [selected] => 0
+    [breaking_news] => 0
+    [status] => 1
+    [view] => 0
+    [created_at] => 2025-11-08 16:30:19
+)
+
+Fillable data: Array
+(
+    [title] => Quảng Ngãi bão vl
+    [summary] => bão vc
+    [body] => ádasdasd
+    [cat_id] => 22
+    [user_id] => 27
+    [image] => public/post-image/2025-11-08-16-30-19.png
+    [selected] => 0
+    [breaking_news] => 0
+    [status] => 1
+    [view] => 0
+)
+
+Fields: Array
+(
+    [0] => title
+    [1] => summary
+    [2] => body
+    [3] => cat_id
+    [4] => user_id
+    [5] => image
+    [6] => selected
+    [7] => breaking_news
+    [8] => status
+    [9] => view
+)
+
+Values: Array
+(
+    [0] => Quảng Ngãi bão vl
+    [1] => bão vc
+    [2] => ádasdasd
+    [3] => 22
+    [4] => 27
+    [5] => public/post-image/2025-11-08-16-30-19.png
+    [6] => 0
+    [7] => 0
+    [8] => 1
+    [9] => 0
+)
+
+Insert result: SUCCESS
+========================
+

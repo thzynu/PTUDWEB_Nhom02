@@ -631,7 +631,7 @@
                 <div class="col-md-6">
                     <div class="d-flex align-items-center">
                         <span class="text-muted me-4"><?= date('F j, Y') ?></span>
-                        <span class="text-muted small">Latest News</span>
+                        <span class="text-muted small">Tin mới nhất</span>
                     </div>
                 </div>
                 <div class="col-md-6">

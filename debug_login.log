@@ -1,0 +1,98 @@
+=== HomeController index 2025-11-08 15:55:56 ===
+User permission: 
+========================
+
+=== HomeController index 2025-11-08 15:56:27 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 15:58:11 ===
+User permission: 
+========================
+
+=== HomeController index 2025-11-08 15:58:20 ===
+User permission: 
+========================
+
+=== HomeController index 2025-11-08 15:58:20 ===
+User permission: 
+========================
+
+=== HomeController index 2025-11-08 16:01:00 ===
+User permission: journalist
+Journalist detected, checking for redirect logic
+========================
+
+=== HomeController index 2025-11-08 16:01:35 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 16:02:12 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 16:12:06 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 16:12:29 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 16:14:50 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 16:19:22 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 16:20:42 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 16:21:06 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 16:21:13 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 16:25:08 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 16:25:26 ===
+User permission: admin
+========================
+
+=== HomeController index 2025-11-08 16:27:40 ===
+User permission: user
+========================
+
+=== HomeController index 2025-11-08 16:30:26 ===
+User permission: journalist
+Journalist detected, checking for redirect logic
+========================
+
+=== HomeController index 2025-11-08 16:30:43 ===
+User permission: journalist
+Journalist detected, checking for redirect logic
+========================
+
+=== HomeController index 2025-11-08 16:30:43 ===
+User permission: journalist
+Journalist detected, checking for redirect logic
+========================
+
+=== HomeController index 2025-11-08 16:30:57 ===
+User permission: journalist
+Journalist detected, checking for redirect logic
+========================
+
+=== HomeController index 2025-11-08 16:30:59 ===
+User permission: journalist
+Journalist detected, checking for redirect logic
+========================
+
