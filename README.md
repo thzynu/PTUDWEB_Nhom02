@@ -1,31 +1,31 @@
-# 📰 Online News Site
+# Online News Site
 
 Một hệ thống quản lý tin tức trực tuyến được xây dựng bằng PHP thuần, với tính năng phát hiện bình luận độc hại sử dụng Machine Learning.
 
-## 🌟 Tính năng chính
+## Tính năng chính
 
-### 👥 Quản lý người dùng
+### Quản lý người dùng
 - **3 Loại tài khoản**: Admin, Nhà báo, Người dùng thường
 - **Xác thực**: Đăng ký, đăng nhập, quên mật khẩu
 - **Phân quyền**: Quản lý quyền truy cập theo vai trò
 
-### 📝 Quản lý nội dung
+### Quản lý nội dung
 - **Bài viết**: Tạo, sửa, xóa bài viết với editor WYSIWYG
 - **Danh mục**: Phân loại bài viết theo chủ đề
 - **Banner**: Quản lý banner quảng cáo
 - **Menu**: Tùy chỉnh menu điều hướng
 
-### 💬 Hệ thống bình luận thông minh
+### Hệ thống bình luận thông minh
 - **AI-Powered**: Phát hiện bình luận độc hại tự động
 - **Machine Learning**: Sử dụng scikit-learn để phân loại
 - **Flask API**: Microservice xử lý ML riêng biệt
 
-### 🎨 Giao diện
+### Giao diện
 - **Responsive**: Tương thích đa thiết bị
 - **Modern UI**: Bootstrap 5 + FontAwesome
 - **Admin Panel**: Giao diện quản trị trực quan
 
-## 🛠️ Công nghệ sử dụng
+## Công nghệ sử dụng
 
 ### Backend
 - **PHP 8.1+**: Core language
@@ -46,7 +46,7 @@ Một hệ thống quản lý tin tức trực tuyến được xây dựng bằ
 - **scikit-learn**: ML library
 - **pandas/numpy**: Data processing
 
-## 📋 Yêu cầu hệ thống
+## Yêu cầu hệ thống
 
 ### Server Requirements
 - PHP 8.1 hoặc cao hơn
@@ -59,7 +59,7 @@ Một hệ thống quản lý tin tức trực tuyến được xây dựng bằ
 - pip package manager
 - Virtual environment (khuyến nghị)
 
-## 🚀 Cài đặt
+## Cài đặt
 
 ### 1. Clone Repository
 ```bash
@@ -118,7 +118,7 @@ php -S localhost:8000
 # Copy project vào htdocs/www folder
 ```
 
-## 🎯 Sử dụng
+## Sử dụng
 
 ### Truy cập hệ thống
 - **Trang chủ**: `http://localhost:8000`
@@ -144,7 +144,7 @@ curl -X POST http://localhost:5000/predict \
   -d '{"comment": "This is a test comment"}'
 ```
 
-## 📁 Cấu trúc thư mục
+## Cấu trúc thư mục
 
 ```
 OnlineNewsSite/
@@ -180,7 +180,7 @@ OnlineNewsSite/
 └── README.md              # This file
 ```
 
-## 🔧 API Endpoints
+## API Endpoints
 
 ### Authentication
 ```
@@ -205,7 +205,7 @@ DELETE /admin/users/{id}         # Xóa user
 POST /predict                    # Phát hiện bình luận độc hại
 ```
 
-## 🤝 Đóng góp
+## Đóng góp
 
 1. Fork repository
 2. Tạo feature branch (`git checkout -b feature/AmazingFeature`)
@@ -213,22 +213,23 @@ POST /predict                    # Phát hiện bình luận độc hại
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Tạo Pull Request
 
-## 📝 License
+## License
 
 Dự án này được phân phối dưới MIT License. Xem file `LICENSE` để biết thêm chi tiết.
 
-## 👨‍💻 Nhóm phát triển
+## Nhóm phát triển
 
 **PTUDWEB_Nhom02**
 - GitHub: [@thzynu](https://github.com/thzynu)
 
-## 🐛 Báo lỗi
+## Báo lỗi
 
 Nếu phát hiện lỗi, vui lòng tạo [Issue](https://github.com/thzynu/PTUDWEB_Nhom02/issues) trên GitHub.
 
-## 📞 Liên hệ
+## Liên hệ
 
 - Project Link: [https://github.com/thzynu/PTUDWEB_Nhom02](https://github.com/thzynu/PTUDWEB_Nhom02)
 
 ---
-⭐ Nếu dự án hữu ích, hãy cho chúng tôi một star nhé!
+
+Nếu dự án hữu ích, hãy cho chúng tôi 5 star nhé!
