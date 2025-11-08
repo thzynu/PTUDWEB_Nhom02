@@ -22,8 +22,8 @@ define('DISPLAY_ERROR', true);
 // Mail config
 define('MAIL_HOST', 'sandbox.smtp.mailtrap.io');
 define('SMTP_AUTH', true);
-define('MAIL_USERNAME', '3bd6db72da2cee');
-define('MAIL_PASSWORD', 'c491d43f2b962e');
+define('MAIL_USERNAME', 'e168a8218972b7');
+define('MAIL_PASSWORD', '9299d5f271afb1');
 define('MAIL_PORT', 2525);
 
 // Error reporting

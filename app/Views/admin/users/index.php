@@ -32,6 +32,8 @@
                     <td>
                         <?php if($user['permission'] == 'admin') { ?>
                             <span class="badge bg-success">Quản trị</span>
+                        <?php } else if($user['permission'] == 'journalist') { ?>
+                            <span class="badge bg-info">Nhà báo</span>
                         <?php } else { ?>
                             <span class="badge bg-primary">Thành viên</span>
                         <?php } ?>

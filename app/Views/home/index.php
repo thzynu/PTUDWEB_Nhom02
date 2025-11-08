@@ -573,7 +573,7 @@
     <section class="py-5" style="background-color: #f8f9fa;">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Latest News</h2>
+                <h2 class="section-title">Tin mới nhất</h2>
             </div>
             
             <div class="row g-4">
@@ -611,7 +611,7 @@
     <section class="py-5">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Most Viewed</h2>
+                <h2 class="section-title">Nhiều lượt xem nhất</h2>
             </div>
             
             <?php 

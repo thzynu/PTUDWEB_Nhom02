@@ -1,0 +1,166 @@
+=== DB INSERT DEBUG 2025-11-08 15:55:34 ===
+Table: users
+SQL: INSERT INTO users(username, email, password, permission, is_active, created_at) VALUES ( :username, :email, :password, :permission, :is_active, now() )
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => vanh123
+    [1] => vanh123@gmail.com
+    [2] => $2y$10$LOiRTnpR01ANF67qoRseJeKfbf7sfvhCQAzJw/qCfAKXTbVCJccaW
+    [3] => 0
+    [4] => 0
+)
+
+Combined: Array
+(
+    [username] => vanh123
+    [email] => vanh123@gmail.com
+    [password] => $2y$10$LOiRTnpR01ANF67qoRseJeKfbf7sfvhCQAzJw/qCfAKXTbVCJccaW
+    [permission] => 0
+    [is_active] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 26
+========================
+
+=== DB INSERT DEBUG 2025-11-08 15:57:42 ===
+Table: users
+SQL: INSERT INTO users(username, email, password, permission, is_active, created_at) VALUES ( :username, :email, :password, :permission, :is_active, now() )
+Fields: Array
+(
+    [0] => username
+    [1] => email
+    [2] => password
+    [3] => permission
+    [4] => is_active
+)
+
+Values: Array
+(
+    [0] => chothanhvy
+    [1] => chothanhvy@gmail.com
+    [2] => $2y$10$8JGRIUNizbguZeuw1VGAZOVt8K6BN2sQGJlbXRSj30tqLR9dAXD16
+    [3] => 0
+    [4] => 0
+)
+
+Combined: Array
+(
+    [username] => chothanhvy
+    [email] => chothanhvy@gmail.com
+    [password] => $2y$10$8JGRIUNizbguZeuw1VGAZOVt8K6BN2sQGJlbXRSj30tqLR9dAXD16
+    [permission] => 0
+    [is_active] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 27
+========================
+
+=== DB INSERT DEBUG 2025-11-08 16:00:58 ===
+Table: posts
+SQL: INSERT INTO posts(title, summary, body, cat_id, user_id, image, selected, breaking_news, status, view, created_at) VALUES ( :title, :summary, :body, :cat_id, :user_id, :image, :selected, :breaking_news, :status, :view, now() )
+Fields: Array
+(
+    [0] => title
+    [1] => summary
+    [2] => body
+    [3] => cat_id
+    [4] => user_id
+    [5] => image
+    [6] => selected
+    [7] => breaking_news
+    [8] => status
+    [9] => view
+)
+
+Values: Array
+(
+    [0] => Quảng Ngãi: Cả 3 người mất tích trên biển Lý Sơn đã được tìm thấy và còn sống
+    [1] => ádasd
+    [2] => Quảng Ngãi: Cả 3 người mất tích trên biển Lý Sơn đã được tìm thấy và còn sống
+    [3] => 22
+    [4] => 27
+    [5] => public/post-image/2025-11-08-16-00-58.png
+    [6] => 0
+    [7] => 0
+    [8] => 1
+    [9] => 0
+)
+
+Combined: Array
+(
+    [title] => Quảng Ngãi: Cả 3 người mất tích trên biển Lý Sơn đã được tìm thấy và còn sống
+    [summary] => ádasd
+    [body] => Quảng Ngãi: Cả 3 người mất tích trên biển Lý Sơn đã được tìm thấy và còn sống
+    [cat_id] => 22
+    [user_id] => 27
+    [image] => public/post-image/2025-11-08-16-00-58.png
+    [selected] => 0
+    [breaking_news] => 0
+    [status] => 1
+    [view] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 44
+========================
+
+=== DB INSERT DEBUG 2025-11-08 16:30:19 ===
+Table: posts
+SQL: INSERT INTO posts(title, summary, body, cat_id, user_id, image, selected, breaking_news, status, view, created_at) VALUES ( :title, :summary, :body, :cat_id, :user_id, :image, :selected, :breaking_news, :status, :view, now() )
+Fields: Array
+(
+    [0] => title
+    [1] => summary
+    [2] => body
+    [3] => cat_id
+    [4] => user_id
+    [5] => image
+    [6] => selected
+    [7] => breaking_news
+    [8] => status
+    [9] => view
+)
+
+Values: Array
+(
+    [0] => Quảng Ngãi bão vl
+    [1] => bão vc
+    [2] => ádasdasd
+    [3] => 22
+    [4] => 27
+    [5] => public/post-image/2025-11-08-16-30-19.png
+    [6] => 0
+    [7] => 0
+    [8] => 1
+    [9] => 0
+)
+
+Combined: Array
+(
+    [title] => Quảng Ngãi bão vl
+    [summary] => bão vc
+    [body] => ádasdasd
+    [cat_id] => 22
+    [user_id] => 27
+    [image] => public/post-image/2025-11-08-16-30-19.png
+    [selected] => 0
+    [breaking_news] => 0
+    [status] => 1
+    [view] => 0
+)
+
+Result: SUCCESS
+Last Insert ID: 45
+========================
+

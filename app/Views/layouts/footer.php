@@ -5,7 +5,7 @@
                 <!-- Popular News -->
                 <div class="col-lg-6 col-md-6 mb-4">
                     <h5 class="text-uppercase fw-bold mb-3 text-white">
-                        <i class="fas fa-fire text-danger me-2"></i>Popular News
+                        <i class="fas fa-fire text-danger me-2"></i>Phổ biến
                     </h5>
                     <ul class="list-unstyled">
                         <?php foreach ($popularPosts ?? [] as $popularPost) { ?>
@@ -23,7 +23,7 @@
                 <!-- Contact Info -->
                 <div class="col-lg-6 col-md-12 mb-4">
                     <h5 class="text-uppercase fw-bold mb-3 text-white">
-                        <i class="fas fa-envelope text-warning me-2"></i>Contact Us
+                        <i class="fas fa-envelope text-warning me-2"></i>Liên hệ chúng tôi
                     </h5>
                     <div class="mb-3">
                         <p class="mb-2 text-white">
@@ -37,7 +37,7 @@
                     </div>
                     
                     <!-- Social Media -->
-                    <h6 class="fw-bold mb-2 text-white">Follow Us</h6>
+                    <h6 class="fw-bold mb-2 text-white">Theo dõi chúng tôi tại</h6>
                     <div class="d-flex gap-2">
                         <a href="#" class="btn btn-outline-light btn-sm">
                             <i class="fab fa-facebook-f"></i>
