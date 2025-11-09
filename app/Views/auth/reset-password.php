@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Reset Password - Online News</title>
+    <title>Đặt lại mật khẩu - Online News</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap 5 CSS -->
@@ -100,8 +100,8 @@
                             <div class="icon-circle">
                                 <i class="fas fa-shield-alt"></i>
                             </div>
-                            <h3 class="fw-bold text-dark mb-2">Reset Password</h3>
-                            <p class="text-muted">Enter your new password</p>
+                            <h3 class="fw-bold text-dark mb-2">Đặt lại mật khẩu</h3>
+                            <p class="text-muted">Nhập mật khẩu mới của bạn</p>
                         </div>
 
                         <!-- Flash Messages -->
@@ -122,7 +122,7 @@
                             <!-- Password Field -->
                             <div class="mb-4">
                                 <label for="password" class="form-label fw-semibold">
-                                    <i class="fas fa-lock me-2"></i>New Password
+                                    <i class="fas fa-lock me-2"></i>Mật khẩu mới
                                 </label>
                                 <div class="position-relative">
                                     <input type="password" 
@@ -139,7 +139,7 @@
                                     </button>
                                 </div>
                                 <div class="invalid-feedback">
-                                    Password must be at least 6 characters.
+                                    Mật khẩu phải có ít nhất 6 ký tự.
                                 </div>
                             </div>
 
@@ -151,9 +151,9 @@
                             <!-- Back to Login -->
                             <div class="text-center">
                                 <p class="mb-0">
-                                    Remember your password? 
+                                    Đã nhớ mật khẩu?
                                     <a href="<?= url('login') ?>" class="text-decoration-none fw-semibold">
-                                        Back to Login
+                                        Quay lại đăng nhập
                                     </a>
                                 </p>
                             </div>
@@ -162,8 +162,7 @@
                         <!-- Back to Home -->
                         <div class="text-center mt-4 pt-3 border-top">
                             <a href="<?= url('/') ?>" class="text-decoration-none text-muted">
-                                <i class="fas fa-arrow-left me-2"></i>Back to Homepage
-                            </a>
+                                <i class="fas fa-arrow-left me-2"></i>Quay lại trang chủ
                         </div>
                     </div>
                 </div>
