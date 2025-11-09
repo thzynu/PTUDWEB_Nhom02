@@ -124,11 +124,11 @@
                                                class="form-control" 
                                                id="username" 
                                                name="username" 
-                                               placeholder="Enter your username"
+                                               placeholder="Nhập tên đăng nhập"
                                                value="<?= isset($_POST['username']) ? $_POST['username'] : '' ?>"
                                                required>
                                         <div class="invalid-feedback">
-                                            Please provide a username.
+                                            Vui lòng nhập tên đăng nhập hợp lệ.
                                         </div>
                                     </div>
 
@@ -140,11 +140,11 @@
                                                class="form-control" 
                                                id="email" 
                                                name="email" 
-                                               placeholder="Enter your email"
+                                               placeholder="Nhập địa chỉ email"
                                                value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>"
                                                required>
                                         <div class="invalid-feedback">
-                                            Please provide a valid email address.
+                                            Vui lòng nhập địa chỉ email hợp lệ.
                                         </div>
                                     </div>
 
@@ -157,7 +157,7 @@
                                                    class="form-control" 
                                                    id="password" 
                                                    name="password" 
-                                                   placeholder="Create a strong password"
+                                                   placeholder="Tạo mật khẩu"
                                                    minlength="8"
                                                    required>
                                             <button type="button" 
@@ -167,7 +167,7 @@
                                             </button>
                                         </div>
                                         <div class="invalid-feedback">
-                                            Password must be at least 8 characters long.
+                                            Mật khẩu phải có ít nhất 8 ký tự.
                                         </div>
                                     </div>
 
@@ -177,7 +177,7 @@
 
                                     <div class="text-center">
                                         <p class="mb-0">
-                                            Already have an account? 
+                                            Đã có tài khoản?
                                             <a href="<?= url('login') ?>" class="text-decoration-none fw-semibold">
                                                 Sign In
                                             </a>
@@ -187,7 +187,7 @@
 
                                 <div class="text-center mt-4 pt-3 border-top">
                                     <a href="<?= url('/') ?>" class="text-decoration-none text-muted">
-                                        <i class="fas fa-arrow-left me-2"></i>Back to Homepage
+                                        <i class="fas fa-arrow-left me-2"></i>Quay lại trang chủ
                                     </a>
                                 </div>
                             </div>
